@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3777de3-699c-458d-b226-d147d00ce17f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../front/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../front/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/address.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/amap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/amap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/commodity.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/commodity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/email.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/restaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/time.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/tool.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/tool.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/userMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/userMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/userModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/userModify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/commodity/Commodity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/commodity/Commodity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/commodity/CommodityBlocks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/commodity/CommodityBlocks.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/commodity/CommodityForShop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/commodity/CommodityForShop.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/common/ChangeAvatar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/common/ChangeAvatar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/common/CommonNavi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/common/CommonNavi.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/common/MapInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/common/MapInput.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/index/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/index/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/index/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/index/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/index/SignUpRestaurant.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/index/SignUpRestaurant.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/index/SignUpUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/index/SignUpUser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerApprove.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerApprove.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerMain.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerNavi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerNavi.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerReport.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerSettle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerSettle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/order/OrderForUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/order/OrderForUser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantBlock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantBlock.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantBlocks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantBlocks.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantCommodity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantCommodity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantMain.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantNavi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantNavi.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantOrder.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantRequest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantRequest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantShop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantShop.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReport.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportAccount.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportAccount.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportOrder.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportUnsub.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportUnsub.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserAddress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserAddress.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserCenter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserCenter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserMain.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserNavi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserNavi.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserOrder.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/report/UserReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/report/UserReport.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/report/UserReportAccount.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/report/UserReportAccount.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/report/UserReportOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/report/UserReportOrder.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/user/report/UserReportUnsub.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/report/UserReportUnsub.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../front/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/YummyApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/AvatarType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/CommodityType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/CommonResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/DeliveryType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/LoginResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/OrderState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/PasswordResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/PayResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/RecordType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/RegisterResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/RequestState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/RequestType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/UserModifyType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/constant/UserState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/account/AccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/commodity/CommodityController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/delivery/DeliveryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/email/EmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/manager/ManagerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/order/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/record/RecordController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/request/RequestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/resaurant/ResaurantController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/user/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/controller/user/UserModifyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Commodity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Delivery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Email.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Inbox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/OrderComm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Orders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Package.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Record.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/Resaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/ResaurantType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/AccountDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/AddressDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/CommodityDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/DeliveryDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/EmailDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/InboxDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/ManagerDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/OrderCommDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/OrderDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/PackageDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/RecordDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/RequestDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/ResaurantDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/ResaurantTypeDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/repository/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/account/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/account/AccountServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/commodity/CommodityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/commodity/CommodityServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/delivery/DeliveryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/delivery/DeliveryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/email/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/email/EmailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/manager/ManagerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/manager/ManagerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/order/OrderCommService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/order/OrderCommServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/order/OrderInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/order/OrderInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/order/OrderStateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/order/OrderStateServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/record/RecordService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/record/RecordServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/request/RequestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/request/RequestServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/resaurant/ResaurantService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/resaurant/ResaurantServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/resaurant/ResaurantTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/resaurant/ResaurantTypeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/user/UserAccessService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/user/UserAccessServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/user/UserInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/user/UserInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/user/UserModifyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/service/user/UserModifyServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/DateUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/EmailCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/ImageUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/MailProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/OrderProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/UserLevelProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/quartz/CancelOrderJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/quartz/ConfirmOrderJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/quartz/QuartzCronDateUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/utils/quartz/QuartzJobManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/AddressVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/CommodityVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/DeliveryVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/DiscountVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/LoginResultVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/OrderAndCommVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/OrderCommVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/OrderVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/PackageVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/RecordVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/RegisterResultVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/RequestVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/ResaurantTypeVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/ResaurantVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/java/com/gaomt/yummy/vo/UserVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/test/java/com/gaomt/yummy/EmailTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/test/java/com/gaomt/yummy/ResaurantTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummy/src/test/java/com/gaomt/yummy/UserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummydb.sql" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3777de3-699c-458d-b226-d147d00ce17f" name="Default Changelist" comment="" />
+      <created>1587119170586</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587119170586</updated>
+      <workItem from="1587119176103" duration="1633000" />
+      <workItem from="1587121400824" duration="526000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2159000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33002833" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
