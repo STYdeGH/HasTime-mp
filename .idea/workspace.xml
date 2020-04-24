@@ -2,73 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3777de3-699c-458d-b226-d147d00ce17f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../front/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../front/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/address.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/amap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/amap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/commodity.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/commodity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/email.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/restaurant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/time.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/tool.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/tool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/userMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/userMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/api/userModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/userModify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/commodity/Commodity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/commodity/Commodity.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/commodity/CommodityBlocks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/commodity/CommodityBlocks.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/commodity/CommodityForShop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/commodity/CommodityForShop.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/common/ChangeAvatar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/common/ChangeAvatar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/common/CommonNavi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/common/CommonNavi.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/common/MapInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/common/MapInput.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/index/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/index/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/index/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/index/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/index/SignUpRestaurant.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/index/SignUpRestaurant.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/index/SignUpUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/index/SignUpUser.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerApprove.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerApprove.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerMain.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerNavi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerNavi.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerReport.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/manager/ManagerSettle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/manager/ManagerSettle.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/order/OrderForUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/order/OrderForUser.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantBlock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantBlock.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantBlocks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantBlocks.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantCommodity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantCommodity.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantMain.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantNavi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantNavi.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantRequest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantRequest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantShop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/RestaurantShop.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReport.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportAccount.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportAccount.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportUnsub.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/restaurant/report/RestaurantReportUnsub.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserAddress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserAddress.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserCenter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserCenter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserMain.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserNavi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserNavi.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/UserOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/UserOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/report/UserReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/report/UserReport.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/report/UserReportAccount.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/report/UserReportAccount.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/report/UserReportOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/report/UserReportOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/user/report/UserReportUnsub.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/user/report/UserReportUnsub.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../front/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test.sql" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/left_nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/top_nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/coach_check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../yummy/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../yummy/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../yummy/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
@@ -191,7 +128,6 @@
       <change beforePath="$PROJECT_DIR$/../yummy/src/test/java/com/gaomt/yummy/EmailTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../yummy/src/test/java/com/gaomt/yummy/ResaurantTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../yummy/src/test/java/com/gaomt/yummy/UserTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../yummydb.sql" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -201,17 +137,70 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/coach_check.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+        <option value="$PROJECT_DIR$/components/nav.html" />
+        <option value="$PROJECT_DIR$/components/left_nav.html" />
+        <option value="$PROJECT_DIR$/public/coach_check.html" />
       </list>
     </option>
   </component>
@@ -228,11 +217,38 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="rdemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rdemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rdemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rdemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rdemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -283,11 +299,13 @@
       <updated>1587119170586</updated>
       <workItem from="1587119176103" duration="1633000" />
       <workItem from="1587121400824" duration="526000" />
+      <workItem from="1587353232830" duration="884000" />
+      <workItem from="1587701158084" duration="2545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2159000" />
+    <option name="totallyTimeSpent" value="5588000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,8 +318,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -334,6 +353,56 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/left_nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/top_nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/coach_check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
