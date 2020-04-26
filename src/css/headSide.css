@@ -1,0 +1,77 @@
+.HeadSide{
+    position: absolute;
+    width: 17%;
+    height: 92.5%;
+    margin-top: 3.4%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.HeadSide .headAdmin{
+    position: relative;
+    width: 100%;
+    height: 28%;
+    margin-top: 5%;
+}
+
+.HeadSide .adminInfo{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 8%;
+    top: 2%;
+}
+
+.adminLogo{
+    position: relative;
+    width: 12%;
+    height: 60%;
+    left: 10%;
+}
+
+.adminName{
+    position: relative;
+    left: 12%;
+    top : 6%;
+    font-family: Roboto;
+    color: #828282;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.HeadSide .sideItem{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 8%;
+    background-color: #E5E5E5;
+    cursor: pointer;
+}
+
+.sideItem .chooseTag{
+    position: relative;
+    height: 100%;
+    width: 2%;
+    background-color: #F2C94C;
+}
+
+.sideItem .sidePic{
+    position: relative;
+    height: 60%;
+    width: 15%;
+    top: 20%;
+    margin-left: 5%;
+}
+
+.sideItem .sideText{
+    position: relative;
+    margin-left: 5%;
+    margin-top: 6%;
+    font-family: Roboto;
+    color: #828282;
+    font-size: 17px;
+    font-weight: bold;
+}
