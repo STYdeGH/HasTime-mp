@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import Top from './js/Top';
 import App from './js/App';
+import Left from './js/Left'
 import HeadSide from './js/Head-Side';
 import * as serviceWorker from './serviceWorker';
 
@@ -10,6 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
       <Top />
       <HeadSide />
+      <Left/>
       <App />
   </React.StrictMode>,
   document.getElementById('root')

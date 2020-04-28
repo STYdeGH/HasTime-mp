@@ -6,7 +6,6 @@
     padding: 0;
     background-color: #4F4F4F;
     text-align: center;
-    align-items: center;
 }
 
 .top-nav .nav-logo {
@@ -17,7 +16,7 @@
     left: 1%;
 }
 
-.nav-title {
+.top-nav .nav-title {
     position: relative;
     float: left;
     left: 2%;
@@ -30,7 +29,7 @@
 }
 
 .btn-exit {
-    position: relative;
+    //position: relative;
     float: right;
     right: 5%;
     top: 10%;
@@ -48,3 +47,29 @@
     color: #FFFFFF;
     cursor: pointer;
 }
+
+/*
+.check-icon {
+    content: url("../assets/check.png");
+    width: 50px;
+    height: 50px;
+}
+
+.manage-icon {
+    content: url("../assets/manage.png");
+    width: 50px;
+    height: 50px;
+}
+
+.unlock-icon {
+    content: url("../assets/unlock.png");
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.text {
+    text-align: center;
+    height: 50px;
+}*/
