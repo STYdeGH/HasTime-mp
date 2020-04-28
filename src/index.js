@@ -11,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
       <Top />
       <HeadSide />
-      {/*<Left/>*/}
+      <Left/>
       <App />
   </React.StrictMode>,
   document.getElementById('root')

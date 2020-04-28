@@ -7,8 +7,6 @@ import avatar from '../assets/admin-avatar.png'
 import '../css/headSide.css'
 
 let firstStyle = {marginTop:'5%',backgroundColor: '#F2C94C'};
-let chosenStyle = {backgroundColor:'#E5E5E5'};
-let chosenTextStyle = {fontWeight: 'bold'};
 let otherStyle = {backgroundColor:'white'};
 let otherTextStyle = {fontWeight: 'normal'};
 
