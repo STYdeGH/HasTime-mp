@@ -5,7 +5,7 @@ import manageClub from '../assets/manageClub.png'
 import manageCourse from '../assets/manageCourse.png'
 import manageMenu from '../assets/manageMenu.png'
 import manageAct from '../assets/manageAct.png'
-import manage from '../assets/guanli.png'
+import manage from '../assets/circle.png'
 
 var firstStyle = {marginTop:'5%'};
 var chosenStyle = {backgroundColor:'#E5E5E5'};
