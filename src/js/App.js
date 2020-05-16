@@ -9,13 +9,13 @@ import CoachManageDetail from "./CoachManageDetail";
 import TeachingManageDetail from "./TeachingManageDetail";
 import CoachAssign from "./CoachAssign";
 import SignUp from "./SignUp";
-import Login from "./Login";
+import SignIn from  './SignIn'
 
 function App() {
   return(
       <Router>
         <div>
-            <Route path={"/Login"} component={Login} />
+            <Route path={"/Login"} component={SignIn} />
             <Route path={"/SignUp"} component={SignUp} />
             <Route path="/CoachList" component={CoachList} />
             <Route path="/CoachCheck" component={CoachCheck} />
