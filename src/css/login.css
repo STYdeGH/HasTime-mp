@@ -48,7 +48,7 @@ body{
     height: 50px;
 }
 
-ul li {
+.li-up{
     float: left;
     margin-left: 10%;
     font-family: Roboto;

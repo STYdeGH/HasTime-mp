@@ -1,0 +1,221 @@
+.mainMenuContent{
+    position: absolute;
+    top : 10%;
+    left: 18%;
+    width: 70%;
+    height: 88%;
+    background-color: white;
+}
+
+.mainMenuContent .menuDetails{
+    position: fixed;
+    top : 10%;
+    left: 18%;
+    height: 85%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.menuDetails .menuDetailImg{
+    position: relative;
+    top : 5%;
+    left: 5%;
+    height: 35%;
+    width: 70%;
+}
+
+.menuDetailImg .menuDetailPic{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.menuDetails .menuDetailInfo{
+    position: relative;
+    top : 5%;
+    left: 5%;
+    height: 58%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuDetailInfo .menuDetailItem{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    height: 14%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#menuDetailShiCai{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    height: 60%;
+    width: 100%;
+}
+
+#menuDetailShiCai img{
+    position: relative;
+    height: 20%;
+    top: -5px;
+}
+
+#menuDetailShiCai ul{
+    position: relative;
+    top: -10px;
+    left: -8px;
+    font-weight: normal;
+    color: #828282;
+}
+
+.menuDetailItem .menuDetailButton{
+    position: relative;
+    top: 50%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    height: 70%;
+    width: 20%;
+    /* identical to box height */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+
+#menuButtonEdit{
+    position: relative;
+    left: 0%;
+    background-color: #63ED6E;
+}
+
+#menuButtonDelete{
+    position: relative;
+    left: 60%;
+    background-color: #EB5757;
+}
+
+
+
+.menuDetailItem .menuDetailAdminLogo{
+    position: relative;
+    top : 5%;
+    left: 0%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.menuDetailItem .menuDetailAdminName{
+    position: relative;
+    top : 20%;
+    left: 3%;
+    font-weight: bold;
+    color: #828282;
+    font-size: 18px;
+}
+
+.menuDetailItem .menuDetailItemLogo{
+    position: relative;
+    top : 10%;
+    left: 0%;
+    height: 60%;
+    width: 8%;
+}
+
+.menuDetailItem .menuDetailItemInfo{
+    position: relative;
+    top : 15%;
+    left: 3%;
+    font-weight: normal;
+    color: #828282;
+    font-size: 15px;
+}
+
+.mainMenuContent .optList{
+    position: absolute;
+    top : 5%;
+    left: 55%;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+}
+
+.optList .prompt{
+    position: relative;
+    top : 0%;
+    left: 2%;
+    height: 8%;
+    width: 96%;
+}
+
+.prompt .promptInfo{
+    position: relative;
+    top : 10%;
+    left: 0%;
+    font-weight: bold;
+    color: #8A8A8A;
+    font-size: 25px;
+}
+
+.optList .splitArea{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    height: 1%;
+    width: 100%;
+    background-color: #A3D0C3;
+}
+
+.optList .opts{
+    position: absolute;
+    top : 10%;
+    left: 0%;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(auto-fill,125px);
+    grid-row-gap: 15px;
+    grid-column-gap: 5%;
+    justify-items: center;
+}
+
+.optItem{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80%;
+    height: 125px;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.optItem .optItemLogo{
+    position: relative;
+    top : 5%;
+    left: 15%;
+    height: 55%;
+    width: 70%;
+    border-radius: 50%;
+}
+
+.optItem .optItemName{
+    position: relative;
+    top : 15%;
+    left: 5%;
+    font-weight: normal;
+    color: #828282;
+}

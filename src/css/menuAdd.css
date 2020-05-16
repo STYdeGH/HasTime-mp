@@ -1,0 +1,209 @@
+.menuAddContent{
+    position: absolute;
+    top : 10%;
+    left: 18%;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+}
+
+.menuAddContent .menuAddInfo{
+    position: relative;
+    top : 2%;
+    left: 0%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuAddInfo .menuAddContent1{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuAddContent1 .menuAddContent1Item{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuAddContent1Item .menuAddContent1ItemLogo{
+    position: relative;
+    top: 15%;
+    left: 2%;
+    width: 6%;
+    height: 55%;
+}
+
+.menuAddContent1Item .menuAddContent1Label{
+    position: relative;
+    top: 15%;
+    left: 3%;
+    font-size: 15px;
+    color: #828282;
+    font-weight: bold;
+}
+
+.menuAddContent1Item input{
+    position: relative;
+    top: 10%;
+    left: 2%;
+    width: 70%;
+    height: 60%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+#menuAddContent1Name{
+    height: 10%;
+}
+
+#menuAddContent1Type{
+    height: 10%;
+}
+
+#menuAddContent1ShiCai{
+    height: 10%;
+}
+
+
+#menuAddContent1Opt{
+    height: 10%;
+}
+
+#menuAddContent1Opt textarea{
+    position: relative;
+    top: 10%;
+    left: 2%;
+    width: 70%;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+textarea:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+#menuAddContent1Dis{
+    height: 10%;
+}
+
+.menuAddInfo .menuAddContent2{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+}
+
+.menuAddContent2 .menuAddContent2Item{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#menuAddClubButton{
+    position: relative;
+    top: 2%;
+    left: 2%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    height: 15%;
+    width: 15%;
+    /* identical to box height */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: #F2C94C;
+}
+
+.menuAddContent2Img{
+    position: relative;
+    width: 50%;
+    height: 70%;
+    top: 5%;
+    left: 25%;
+    background-color: #F8F8F8;
+}
+
+
+.menuAddContent2Img #menuAddContent2Pic{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menuAddContent .menuAddContentButton{
+    position: relative;
+    top : 5%;
+    left: 0%;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuAddContentButton button{
+    top: 5%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    height: 40%;
+    width: 10%;
+    /* identical to box height */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+
+#menuAddContentButtonCancel{
+    position: relative;
+    left: 25%;
+    background-color: #63ED6E;
+}
+
+#menuAddContentButtonSure{
+    position: relative;
+    left: 55%;
+    background-color: #EB5757;
+}

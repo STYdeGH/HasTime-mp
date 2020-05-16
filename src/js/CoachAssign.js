@@ -57,7 +57,7 @@ function CoachAssign() {
                         <label className="club-name">club-name</label>
                     </div>
                     <div className="coach-info">
-                        <ul>
+                        <ul className="coach-info-ul">
                             <li className="icon-name"><label>{name}</label></li>
                             <li className="icon-gender"><label>{gender}</label></li>
                             <li className="icon-age"><label>{age}</label></li>
