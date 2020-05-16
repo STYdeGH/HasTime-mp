@@ -1,0 +1,238 @@
+.courseEditContent{
+    position: absolute;
+    top : 10%;
+    left: 18%;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+}
+
+.courseEditContent .courseEditInfo{
+    position: relative;
+    top : 2%;
+    left: 0%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.courseEditInfo .courseEditContent1{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.courseEditContent1 .courseEditContent1Item{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.courseEditContent1Item .courseEditContent1ItemLogo{
+    position: relative;
+    top: 15%;
+    left: 2%;
+    width: 6%;
+    height: 55%;
+}
+
+.courseEditContent1Item .courseEditContent1Label{
+    position: relative;
+    top: 15%;
+    left: 3%;
+    font-size: 15px;
+    color: #828282;
+    font-weight: bold;
+}
+
+.courseEditContent1Item input{
+    position: relative;
+    top: 10%;
+    left: 2%;
+    width: 70%;
+    height: 60%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+
+input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+#courseEditContent1Name{
+    height: 10%;
+}
+
+#courseEditContent1Type{
+    height: 10%;
+}
+
+.courseEditContent1Item select{
+    position: relative;
+    top: 10%;
+    left: 2%;
+    width: 71.5%;
+    height: 70%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+#courseEditContent1Address {
+    position: relative;
+    top: 0.5%;
+    height: 10%;
+}
+
+#courseEditContent1Time{
+    height: 10%;
+}
+
+.courseDateInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+.courseDateInfo input{
+    position: relative;
+    top: 10%;
+    left: 3.5%;
+    width: 70%;
+    height: 60%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+.courseDateInfo text{
+    position: relative;
+    top: 10%;
+    left: 12%;
+
+}
+
+#courseEndInput{
+    position: relative;
+    left: 19%;
+}
+
+
+#courseEditContent1Dis{
+    height: 10%;
+}
+
+.courseEditInfo .courseEditContent2{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+}
+
+.courseEditContent2 .courseEditContent2Item{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#courseEditButton{
+    position: relative;
+    top: 2%;
+    left: 2%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    height: 15%;
+    width: 15%;
+    /* identical to box height */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: #F2C94C;
+}
+
+.courseEditContent2Img{
+    position: relative;
+    width: 50%;
+    height: 70%;
+    top: 5%;
+    left: 25%;
+    background-color: #F8F8F8;
+}
+
+
+.courseEditContent2Img #courseEditContent2Pic{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.courseEditContent .courseEditContentButton{
+    position: relative;
+    top : 5%;
+    left: 0%;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.courseEditContentButton button{
+    top: 5%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    height: 40%;
+    width: 10%;
+    /* identical to box height */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+
+#courseEditContentButtonCancel{
+    position: relative;
+    left: 25%;
+    background-color: #63ED6E;
+}
+
+#courseEditContentButtonSure{
+    position: relative;
+    left: 55%;
+    background-color: #EB5757;
+}

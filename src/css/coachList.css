@@ -6,19 +6,18 @@
     margin-top: 5%;
     margin-left: 2%;
 }
-
-input, button {
+.content input, button {
     border: none;
     outline: none;
 }
 
-input {
+.content input {
     width: 100%;
     height: 40px;
     padding-left: 13px;
 }
 
-button {
+.content button {
     height: 40px;
     width: 40px;
     cursor: pointer;

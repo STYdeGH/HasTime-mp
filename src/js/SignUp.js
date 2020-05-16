@@ -51,7 +51,7 @@ class SignUp extends Component {
                 </div>
                 <div className="login">
                     <div  className="login-nav">
-                        <ul>
+                        <ul className="login-ul">
                             <li onClick={()=>window.location.href = "/Login"} className="in">sign in</li>
                             <li className="up">sign up</li>
                         </ul>
