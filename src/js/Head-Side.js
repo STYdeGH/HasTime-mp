@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../css/headSide.css'
 import headadmin from '../assets/headadmin.jpg'
 import manageClub from '../assets/manageClub.png'
@@ -20,10 +21,13 @@ function HeadSide(){
         <div className="HeadSide">
             <img src={headadmin} alt="admin" className="headAdmin"/>
 
+
+            <Link to="/Page1/" style={{color:'black'}}>
             <div className="adminInfo">
                 <img src={manage} alt="manage" className="adminLogo"/>
                 <text className="adminName">admin-username</text>
             </div>
+            </Link>
 
             <div className="sideItem" style={firstStyle} onClick={jumpClub}>
                 <div className="chooseTag">
@@ -87,7 +91,7 @@ function jumpClub() {
 
 function jumpCourse() {
     alert("success");
-    window.location.href = "index.html";
+    window.location.href = "clubManage.html";
     /*var side = document.getElementsByClassName("sideItem");
     var firstSide = side[1];
     firstSide.style = chosenStyle;

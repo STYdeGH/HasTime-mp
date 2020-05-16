@@ -1,0 +1,209 @@
+.menuEditContent{
+    position: absolute;
+    top : 10%;
+    left: 18%;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+}
+
+.menuEditContent .menuEditInfo{
+    position: relative;
+    top : 2%;
+    left: 0%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuEditInfo .menuEditContent1{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuEditContent1 .menuEditContent1Item{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuEditContent1Item .menuEditContent1ItemLogo{
+    position: relative;
+    top: 15%;
+    left: 2%;
+    width: 6%;
+    height: 55%;
+}
+
+.menuEditContent1Item .menuEditContent1Label{
+    position: relative;
+    top: 15%;
+    left: 3%;
+    font-size: 15px;
+    color: #828282;
+    font-weight: bold;
+}
+
+.menuEditContent1Item input{
+    position: relative;
+    top: 10%;
+    left: 2%;
+    width: 70%;
+    height: 60%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+#menuEditContent1Name{
+    height: 10%;
+}
+
+#menuEditContent1Type{
+    height: 10%;
+}
+
+#menuEditContent1ShiCai{
+    height: 10%;
+}
+
+
+#menuEditContent1Opt{
+    height: 10%;
+}
+
+#menuEditContent1Opt textarea{
+    position: relative;
+    top: 10%;
+    left: 2%;
+    width: 70%;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+textarea:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+#menuEditContent1Dis{
+    height: 10%;
+}
+
+.menuEditInfo .menuEditContent2{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+}
+
+.menuEditContent2 .menuEditContent2Item{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#menuEditClubButton{
+    position: relative;
+    top: 2%;
+    left: 2%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    height: 15%;
+    width: 15%;
+    /* identical to box height */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: #F2C94C;
+}
+
+.menuEditContent2Img{
+    position: relative;
+    width: 50%;
+    height: 70%;
+    top: 5%;
+    left: 25%;
+    background-color: #F8F8F8;
+}
+
+
+.menuEditContent2Img #menuEditContent2Pic{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menuEditContent .menuEditContentButton{
+    position: relative;
+    top : 5%;
+    left: 0%;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuEditContentButton button{
+    top: 5%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    height: 40%;
+    width: 10%;
+    /* identical to box height */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+
+#menuEditContentButtonCancel{
+    position: relative;
+    left: 25%;
+    background-color: #63ED6E;
+}
+
+#menuEditContentButtonSure{
+    position: relative;
+    left: 55%;
+    background-color: #EB5757;
+}
