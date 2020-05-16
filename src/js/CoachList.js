@@ -3,6 +3,31 @@ import  clubLogo from '../assets/icon-club.png'
 import avatar from '../assets/coach.png'
 import '../css/coachList.css'
 
+/*let data = [];
+function getCoachList() {
+    let id = "";
+    let state = 0;
+    let name = "";
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "http://101.200.237.82:8241/swagger-ui.html#/web-controller/getCoachsByAdminIdAndStateAndNameUsingGET",
+        data:{
+            "adminId": id,
+            "state": state,
+            "coachName" : name,
+        },
+
+        success : function(result){
+            data = eval(result).data;
+        },
+
+        error : function() {
+            alert("ajax异常！");
+        }
+    })
+}*/
+
 function CoachList() {
         return(
             <div className="content" id="content">
@@ -12,7 +37,7 @@ function CoachList() {
                 </div>
 
                 <div className="list">
-                    <div className="listItem">
+                    <div className="listItem" onClick={()=>window.location.href = "/CoachCheck/detail"}>
                         <img src={avatar} className="coach-pic" alt="coach-avatar" />
                         <div>
                             <img src={clubLogo} className="club-logo" alt="club-logo"/>

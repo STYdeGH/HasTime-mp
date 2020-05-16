@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/app-logo.png'
 import '../css/nav.css'
 
 function Top() {
@@ -7,7 +7,7 @@ function Top() {
         <div className="top-nav">
             <img src={logo} className="nav-logo" alt="logo" />
             <label className="nav-title">Has Time</label>
-            <button className="btn-exit" onClick={()=>this.props.history.push("./coach_check")}>exit</button>
+            <button className="btn-exit" onClick={()=>window.location.href = "/CoachList"}>exit</button>
         </div>
     )
 }

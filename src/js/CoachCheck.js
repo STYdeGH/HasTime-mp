@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import Top from './Top';
 import CoachList from "./CoachList";
-import '../css/headSide.css'
 import Left from "./Left";
 
 function CoachCheck() {

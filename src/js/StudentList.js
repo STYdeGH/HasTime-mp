@@ -18,7 +18,7 @@ class StudentList extends React.Component{
                 </div>
 
                 <div className="list">
-                    <div className="listItem">
+                    <div className="listItem"  onClick={()=>window.location.href = "/TeachingManage/detail"}>
                         <img src={ali} className="coach-pic" alt="coach-avatar" />
                         <div>
                             <img src={clubLogo} className="club-logo" alt="club-logo"/>
