@@ -1,0 +1,116 @@
+.content-manage{
+    position: absolute;
+    top : 10%;
+    left: 18%;
+    width: 70%;
+    height: 88%;
+    background-color: white;
+}
+
+.content-manage .manageDetails{
+    position: fixed;
+    top : 10%;
+    left: 18%;
+    height: 85%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.manageDetails .manageDetailImg{
+    position: relative;
+    top : 5%;
+    left: 5%;
+    height: 35%;
+    width: 50%;
+}
+
+.manageDetailImg .manageDetailPic{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: #F9F0DA solid 2px;
+}
+
+.manageDetails .manageDetailInfo{
+    position: relative;
+    top : 5%;
+    left: 8%;
+    height: 58%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.manageDetailInfo #manageDetailClub {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.manageDetailInfo .manageDetailItem{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    height: 14%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.manageDetailItem .manageDetailItemLogo{
+    position: relative;
+    top : 10%;
+    left: 0%;
+    height: 60%;
+    width: 8%;
+}
+
+.manageDetailItem .manageDetailItemInfo{
+    position: relative;
+    top : 15%;
+    left: 3%;
+    font-weight: normal;
+    color: #828282;
+    font-size: 15px;
+}
+
+.content-manage  .manageOperation {
+    position: relative;
+    float: right;
+    margin-right: 30%;
+    margin-top: 20%;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.manageOperation button {
+    margin-top: 20%;
+    width: 100px;
+    height: 36px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial,Helvetica,sans-serif;;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: bold;
+    outline-style: none;
+
+}
+
+.btn-assign {
+    background-color: #66afe9;
+
+}
+
+.btn-leave {
+    background-color: goldenrod;
+}
+
+.manageOperation button:hover {
+    color: white;
+}

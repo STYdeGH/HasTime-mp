@@ -1,0 +1,124 @@
+.content-unlock {
+    position: absolute;
+    top : 10%;
+    left: 18%;
+    width: 70%;
+    height: 88%;
+    background-color: white;
+}
+
+.content-unlock .unlockDetails{
+    position: fixed;
+    top : 10%;
+    left: 18%;
+    height: 85%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.unlockDetails .unlockDetailImg{
+    position: relative;
+    top : 5%;
+    left: 5%;
+    height: 35%;
+    width: 50%;
+}
+
+.unlockDetailImg .unlockDetailPic{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: #F9F0DA solid 2px;
+}
+
+.unlockDetails .unlockDetailInfo{
+    position: relative;
+    top : 5%;
+    left: 8%;
+    height: 58%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.unlockDetailInfo #unlockDetailClub {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.unlockDetailInfo .unlockDetailItem{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    height: 14%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.unlockDetailItem .unlockDetailButton{
+    top: 30%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    height: 70%;
+    width: 20%;
+    /* identical to box height */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+
+#unlockButtonEdit{
+    position: relative;
+    left: 0%;
+    background-color: #63ED6E;
+}
+
+#unlockButtonDelete{
+    position: relative;
+    left: 60%;
+    background-color: #EB5757;
+}
+
+
+.unlockDetailItem .unlockDetailItemLogo{
+    position: relative;
+    top : 10%;
+    left: 0%;
+    height: 60%;
+    width: 8%;
+}
+
+.unlockDetailItem .unlockDetailItemInfo{
+    position: relative;
+    top : 15%;
+    left: 3%;
+    font-weight: normal;
+    color: #828282;
+    font-size: 15px;
+}
+
+.btn-unlock {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: red;
+    color: #F9F0DA;
+}
+
+.btn-unlock:hover {
+    color: whitesmoke;
+}
+
+#btn-unlock {
+    margin-left: 10%;
+}
