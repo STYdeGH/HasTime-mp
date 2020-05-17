@@ -48,6 +48,23 @@ body{
     height: 50px;
 }
 
+.nav-ul {
+    list-style-type: none;
+}
+
+.nav-ul li{
+    float: left;
+    margin-left: 10%;
+    font-family: Roboto;
+    color: #828282;
+    font-size: 20px;
+    font-weight: bold;
+    width: 25%;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .li-up{
     float: left;
     margin-left: 10%;
@@ -85,6 +102,7 @@ body{
     margin-bottom: 5%;
     width: 60%;
     border-radius: 5px;
+    border: 0;
 }
 
 .login-tab input:hover{
