@@ -48,6 +48,23 @@ body{
     height: 50px;
 }
 
+.login-ul {
+    list-style-type: none;
+}
+
+.login-ul li {
+    float: left;
+    margin-left: 10%;
+    font-family: Roboto;
+    color: #828282;
+    font-size: 20px;
+    font-weight: bold;
+    width: 25%;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .in{
     float: left;
     margin-left: 10%;
@@ -79,11 +96,18 @@ body{
     font-weight: normal;
 }
 
+
+.login-tab p {
+    position: relative;
+
+}
+
 .login-tab input {
     position: relative;
     margin-left: 3%;
     margin-bottom: 5%;
-    width: 60%;
+    width: 80%;
+    height: 40px;
     border-radius: 5px;
 }
 
@@ -91,10 +115,7 @@ body{
     border: #F2C94C solid 1px;
 }
 
-.login-tab p {
-    position: relative;
-//margin-left: 10%;
-}
+
 
 .login-tab select {
     display: inline-block;

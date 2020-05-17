@@ -42,7 +42,7 @@ class SignIn extends Component {
             </div>
             <div className="login">
             <div  className="login-nav">
-            <ul>
+            <ul className="nav-ul">
             <li className="li-in">sign in</li>
             <li onClick={()=>window.location.href = "/SignUp"} className="li-up">sign up</li>
             </ul>
@@ -50,12 +50,12 @@ class SignIn extends Component {
             <form className="login-tab">
             <p>
             <label>手机号</label>
-            <input type="text" required="required" placeholder="请输入手机号..."
+            <input type="text" required="required" placeholder=" 请输入手机号..."
                    value={this.state.phone} onChange={this.handleInput.bind(this, 'phone')} />
             </p>
             <p>
             <label>密 &nbsp;码&nbsp;</label>
-            <input type="password" required="required" placeholder="请输入密码..."
+            <input type="password" required="required" placeholder=" 请输入密码..."
                    value={this.state.password} onChange={this.handleInput.bind(this, 'password')}/>
             </p>
 

@@ -59,18 +59,18 @@ class SignUp extends Component {
                     <form className="login-tab">
                         <p>
                             <label>&nbsp;手 机 号</label>
-                            <input type="text" required="required" placeholder="请输入手机号..."
+                            <input type="text" required="required" placeholder=" 请输入手机号..."
                                    value={this.state.phone} onChange={this.handleInput.bind(this, 'phone')} />
                         </p>
                         <p>
                             <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密 码</label>
-                            <input type="password" required="required" placeholder="请输入密码..." id="pwd"
+                            <input type="password" required="required" placeholder=" 请输入密码..." id="pwd"
                                    value={this.state.password} onChange={this.handleInput.bind(this, 'password')}/>
                         </p>
 
                         <p>
                             <label>确认密码</label>
-                            <input type="password" required="required" placeholder="请再次输入密码..." id="again"
+                            <input type="password" required="required" placeholder=" 请再次输入密码..." id="again"
                                    value={this.state.again} onChange={this.handleInput.bind(this, 'again')}/>
                         </p>
                         <p>
