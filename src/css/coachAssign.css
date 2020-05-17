@@ -1,0 +1,150 @@
+.content-assign {
+    position: absolute;
+    top : 10%;
+    left: 18%;
+    width: 70%;
+    height: 88%;
+    background-color: white;
+}
+
+.content-assign  .manageDetails{
+    position: fixed;
+    top : 10%;
+    left: 18%;
+    height: 85%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.manageDetails .manageDetailImg{
+    position: relative;
+    top : 5%;
+    left: 5%;
+    height: 35%;
+    width: 50%;
+}
+
+.manageDetailImg .manageDetailPic{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: #F9F0DA solid 2px;
+}
+
+.manageDetails .manageDetailInfo{
+    position: relative;
+    top : 5%;
+    left: 8%;
+    height: 58%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.manageDetailInfo #manageDetailClub {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.manageDetailInfo .manageDetailItem{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    height: 14%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.manageDetailItem .manageDetailItemLogo{
+    position: relative;
+    top : 10%;
+    left: 0%;
+    height: 60%;
+    width: 8%;
+}
+
+.manageDetailItem .manageDetailItemInfo{
+    position: relative;
+    top : 15%;
+    left: 3%;
+    font-weight: normal;
+    color: #828282;
+    font-size: 15px;
+}
+
+.content-assign .operation {
+    position: relative;
+    float: right;
+    margin-right: 30%;
+    margin-top: 10%;
+    width: 20%;
+    height: 80%;
+}
+
+.operation select {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    vertical-align: middle;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #aaa;
+    text-shadow: none;
+    border-radius: 4px;
+    transition: box-shadow 0.25s ease;
+    z-index: 2;
+}
+
+.operation select:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.operation select:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ccc;
+    top: 14px;
+    right: 10px;
+    cursor: pointer;
+    z-index: -2;
+}
+.operation select select {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.operation select select:focus {
+    outline: none;
+}
+
+.operation .btn-yes {
+    position: relative;
+    float: right;
+    margin-top: 100%;
+    margin-left: 25%;
+    width: 100px;
+    height: 36px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: bold;
+    outline-style: none;
+    background-color: #32CD32;
+}

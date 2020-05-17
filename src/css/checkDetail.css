@@ -1,0 +1,115 @@
+.content-check {
+    position: absolute;
+    top : 10%;
+    left: 18%;
+    width: 70%;
+    height: 88%;
+    background-color: white;
+}
+
+.content-check .checkDetails{
+    position: fixed;
+    top : 10%;
+    left: 18%;
+    height: 85%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.checkDetails .checkDetailImg{
+    position: relative;
+    top : 5%;
+    left: 5%;
+    height: 35%;
+    width: 50%;
+}
+
+.checkDetailImg .checkDetailPic{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: #F9F0DA solid 2px;
+}
+
+.checkDetails .checkDetailInfo{
+    position: relative;
+    top : 5%;
+    left: 8%;
+    height: 58%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkDetailInfo #checkDetailClub {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.checkDetailInfo .checkDetailItem{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    height: 14%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.checkDetailItem .checkDetailItemLogo{
+    position: relative;
+    top : 10%;
+    left: 0%;
+    height: 60%;
+    width: 8%;
+}
+
+.checkDetailItem .checkDetailItemInfo{
+    position: relative;
+    top : 15%;
+    left: 3%;
+    font-weight: normal;
+    color: #828282;
+    font-size: 15px;
+}
+
+.content-check  .checkOperation {
+    position: relative;
+    float: right;
+    margin-right: 30%;
+    margin-top: 20%;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkOperation button {
+    margin-top: 20%;
+    width: 100px;
+    height: 36px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: bold;
+    outline-style: none;
+}
+
+.btn-pass {
+    background-color: #32CD32;
+}
+
+.btn-refuse {
+    background-color: #FF4500;
+    color: #F9F0DA;
+}
+
+.checkOperation button:hover {
+    color: white;
+}
