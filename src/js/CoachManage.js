@@ -28,7 +28,7 @@ function CoachManage() {
                         <label className="adminName">admin-username</label>
                     </div>
 
-                    <div className="sideItem" id="check" onClick={jumpCheck}>
+                    <div className="sideItem" id="check" onClick={jumpCheck} style={{backgroundColor:"white"}}>
                         <img src={checkLogo} alt="check-icon" className="sidePic" />
                         <label className="sideText">教练审核</label>
                     </div>

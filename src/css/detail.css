@@ -1,11 +1,11 @@
 .content {
     position: relative;
     float: right;
-    width: 60%;
-    height: 90%;
+    width: 80%;
+    height: 100%;
     margin-top: 5%;
-    margin-right: 12%;
-    background-color: white;
+    margin-left: 2%;
+    /*background-color: white;*/
 }
 
 .avatar {
@@ -44,23 +44,23 @@
     margin-left: 3%;
 }
 
-ul{
+.coach-info-ul{
     list-style-type: none;
 }
 
-ul li {
+.coach-info-ul li {
     margin-bottom: 10px;
     list-style-position: inside;
     height: 10%;
 }
 
-ul li span {
+.coach-info-ul li span {
     width: 3%;
     height: 3%;
     margin-right: 5px;
 }
 
-ul li label {
+.coach-info-ul li label {
     margin-left: 45px;
 }
 
