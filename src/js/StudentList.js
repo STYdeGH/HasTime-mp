@@ -1,7 +1,7 @@
 import React from 'react'
-import  clubLogo from '../assets/icon-club.png'
+import  lockLogo from '../assets/icon-lock.png'
 import ali from '../assets/ali.jpg'
-import '../css/coachList.css'
+import '../css/studentList.css'
 
 
 class StudentList extends React.Component{
@@ -11,52 +11,52 @@ class StudentList extends React.Component{
 
     render() {
         return(
-            <div className="content" id="content">
+            <div className="studentList" id="content">
                 <div className="search-bar">
                     <input type="text" placeholder="请输入您要搜索的内容..."></input>
                     <button type="submit"></button>
                 </div>
 
-                <div className="list">
-                    <div className="listItem"  onClick={()=>window.location.href = "/TeachingManage/detail"}>
-                        <img src={ali} className="coach-pic" alt="coach-avatar" />
-                        <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
+                <div className="list-student">
+                    <div className="studentItem"  onClick={()=>window.location.href = "/TeachingManageDetail"}>
+                        <img src={ali} className="student-pic" alt="student-avatar" />
+                        <div className="lock-info">
+                            <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                            <label className="coach-name">coach-name</label>
                         </div>
-                        <label className="coach-name">student-name</label>
+                        <label className="student-name">student-name</label>
                     </div>
-                    <div className="listItem">
-                        <img src={ali} className="coach-pic" alt="coach-avatar" />
-                        <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
+                    <div className="studentItem">
+                        <img src={ali} className="student-pic" alt="student-avatar" />
+                        <div className="lock-info">
+                            <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                            <label className="coach-name">coach-name</label>
                         </div>
-                        <label className="coach-name">student-name</label>
+                        <label className="student-name">student-name</label>
                     </div>
-                    <div className="listItem">
-                        <img src={ali} className="coach-pic" alt="coach-avatar" />
-                        <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
+                    <div className="studentItem">
+                        <img src={ali} className="student-pic" alt="student-avatar" />
+                        <div className="lock-info">
+                            <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                            <label className="coach-name">coach-name</label>
                         </div>
-                        <label className="coach-name">student-name</label>
+                        <label className="student-name">student-name</label>
                     </div>
-                    <div className="listItem">
-                        <img src={ali} className="coach-pic" alt="coach-avatar" />
+                    <div className="studentItem">
+                        <img src={ali} className="student-pic" alt="student-avatar" />
                         <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
+                            <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                            <label className="coach-name">coach-name</label>
                         </div>
-                        <label className="coach-name">student-name</label>
+                        <label className="student-name">student-name</label>
                     </div>
-                    <div className="listItem">
-                        <img src={ali} className="coach-pic" alt="coach-avatar" />
+                    <div className="studentItem">
+                        <img src={ali} className="student-pic" alt="student-avatar" />
                         <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
+                            <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                            <label className="coach-name">coach-name</label>
                         </div>
-                        <label className="coach-name">student-name</label>
+                        <label className="student-name">student-name</label>
                     </div>
                 </div>
             </div>
@@ -74,45 +74,45 @@ class StudentList extends React.Component{
             </div>
 
             <div className="list">
-                <div className="listItem">
-                    <img src={ali} className="coach-pic" alt="coach-avatar" />
+                <div className="studentItem">
+                    <img src={ali} className="student-pic" alt="student-avatar" />
                     <div>
-                        <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                        <label className="club-name">club-name</label>
+                        <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                        <label className="coach-name">coach-name</label>
                     </div>
-                    <label className="coach-name">student-name</label>
+                    <label className="student-name">student-name</label>
                 </div>
-                <div className="listItem">
-                    <img src={ali} className="coach-pic" alt="coach-avatar" />
+                <div className="studentItem">
+                    <img src={ali} className="student-pic" alt="student-avatar" />
                     <div>
-                        <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                        <label className="club-name">club-name</label>
+                        <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                        <label className="coach-name">coach-name</label>
                     </div>
-                    <label className="coach-name">student-name</label>
+                    <label className="student-name">student-name</label>
                 </div>
-                <div className="listItem">
-                    <img src={ali} className="coach-pic" alt="coach-avatar" />
+                <div className="studentItem">
+                    <img src={ali} className="student-pic" alt="student-avatar" />
                     <div>
-                        <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                        <label className="club-name">club-name</label>
+                        <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                        <label className="coach-name">coach-name</label>
                     </div>
-                    <label className="coach-name">student-name</label>
+                    <label className="student-name">student-name</label>
                 </div>
-                <div className="listItem">
-                    <img src={ali} className="coach-pic" alt="coach-avatar" />
+                <div className="studentItem">
+                    <img src={ali} className="student-pic" alt="student-avatar" />
                     <div>
-                        <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                        <label className="club-name">club-name</label>
+                        <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                        <label className="coach-name">coach-name</label>
                     </div>
-                    <label className="coach-name">student-name</label>
+                    <label className="student-name">student-name</label>
                 </div>
-                <div className="listItem">
-                    <img src={ali} className="coach-pic" alt="coach-avatar" />
+                <div className="studentItem">
+                    <img src={ali} className="student-pic" alt="student-avatar" />
                     <div>
-                        <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                        <label className="club-name">club-name</label>
+                        <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
+                        <label className="coach-name">coach-name</label>
                     </div>
-                    <label className="coach-name">student-name</label>
+                    <label className="student-name">student-name</label>
                 </div>
             </div>
         </div>

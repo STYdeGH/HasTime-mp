@@ -37,44 +37,27 @@ function CoachList() {
                 </div>
 
                 <div className="list">
-                    <div className="listItem" onClick={()=>window.location.href = "/CoachCheck/detail"}>
+                    <div className="listItem" onClick={()=>window.location.href = "/CoachCheckDetail"}>
                         <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                        <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
-                        </div>
+
                         <label className="coach-name">coach-name</label>
                     </div>
                     <div className="listItem">
                         <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                        <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
-                        </div>
                         <label className="coach-name">coach-name</label>
                     </div>
                     <div className="listItem">
                         <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                        <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
-                        </div>
+
                         <label className="coach-name">coach-name</label>
                     </div>
                     <div className="listItem">
                         <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                        <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
-                        </div>
+
                         <label className="coach-name">coach-name</label>
                     </div>
                     <div className="listItem">
                         <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                        <div>
-                            <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                            <label className="club-name">club-name</label>
-                        </div>
                         <label className="coach-name">coach-name</label>
                     </div>
                 </div>

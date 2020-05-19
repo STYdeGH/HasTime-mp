@@ -1,28 +1,34 @@
-import React from 'react';
-
+import React from 'react'
+import '../css/headSide.css'
+import '../css/nav.css'
+import '../css/index.css'
+import '../css/manageDetail.css'
+import logo from "../assets/logo.png";
 import ali from '../assets/coach.png'
 import clubLogo from '../assets/icon-club.png'
-import avatar from "../assets/admin-avatar.png";
-import userLogo from "../assets/circle.png";
-import checkLogo from "../assets/icon-check.png";
-import manageLogo from "../assets/icon-manage.png";
-import unlockLogo from "../assets/icon-unlock.png";
 import name from '../assets/icon-name.png'
 import gender from '../assets/icon-gender.png'
 import age from '../assets/icon-age.png'
 import phone from '../assets/icon-phone.png'
 import comment from '../assets/icon-comment.png'
-import Top from './Top';
-import '../css/coachAssign.css'
+import avatar from "../assets/admin-avatar.png";
+import userLogo from "../assets/circle.png";
+import checkLogo from "../assets/icon-check.png";
+import manageLogo from "../assets/icon-manage.png";
+import unlockLogo from "../assets/icon-unlock.png";
 
 let otherStyle = {backgroundColor:'white', fontWeight: 'normal'};
 let chosenStyle = {backgroundColor:'#F2C94C', fontWeight: 'bold'};
 
-function CoachAssign() {
-
+function ManageDetail() {
     return(
         <div className="root">
-            <Top/>
+            <div className="top-nav">
+                <img src={logo} className="nav-logo" alt="logo" />
+                <label className="nav-title">Has Time</label>
+                <button className="btn-exit" onClick={()=>this.props.history.push("./coach_check")}>exit</button>
+            </div>
+
             <div className="HeadSide">
                 <img src={avatar} alt="admin" className="headAdmin" />
 
@@ -36,7 +42,7 @@ function CoachAssign() {
                     <label className="sideText">教练审核</label>
                 </div>
 
-                <div className="sideItem" id="manage" style={chosenStyle} onClick={jumpManage}>
+                <div className="sideItem" id="manage" style={chosenStyle}>
                     <img src={manageLogo} alt="manage-icon" className="sidePic"/>
                     <label className="sideText">教练管理</label>
                 </div>
@@ -47,7 +53,8 @@ function CoachAssign() {
                 </div>
 
             </div>
-            <div className="content-assign">
+
+            <div className = "content-manage">
                 <div className = "manageDetails">
                     <div className = "manageDetailImg">
                         <img src={ali} alt="course" className="manageDetailPic"/>
@@ -86,34 +93,27 @@ function CoachAssign() {
                         </div>
                     </div>
                 </div>
-                <div className="operation">
-                    <select>
-                        <option>请选择</option>
-                        <option>俱乐部1</option>
-                        <option>俱乐部2</option>
-                        <option>俱乐部3</option>
-                        <option>俱乐部4</option>
-                    </select>
-                    <button className="btn-yes">确定</button>
+
+                <div className="manageOperation">
+                    <button className="btn-assign"  onClick={()=>window.location.href = "/CoachAssign"}>调 遣</button>
+                    <button className="btn-leave">离 职</button>
                 </div>
+
             </div>
         </div>
     )
 }
 
-export default CoachAssign;
+export default ManageDetail
 
 function jumpCheck() {
-
     window.location.href = "/CoachCheck";
 }
 
 function jumpManage() {
-
     window.location.href = "/CoachManage";
 }
 
 function jumpUnlock() {
-
     window.location.href = "/TeachingManage";
 }
