@@ -28,7 +28,7 @@ function CoachManage() {
                         <label className="adminName">admin-username</label>
                     </div>
 
-                    <div className="sideItem" id="check" onClick={jumpCheck} style={{backgroundColor:"white"}}>
+                    <div className="sideItem" id="check" onClick={jumpCheck} style={otherStyle}>
                         <img src={checkLogo} alt="check-icon" className="sidePic" />
                         <label className="sideText">教练审核</label>
                     </div>
@@ -51,44 +51,29 @@ function CoachManage() {
                     </div>
 
                     <div className="list">
-                        <div className="listItem" onClick={()=>window.location.href = "/CoachManage/detail"}>
+                        <div className="listItem" onClick={()=>window.location.href = "/CoachManageDetail"}>
                             <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                            <div>
-                                <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                                <label className="club-name">club-name</label>
-                            </div>
+
                             <label className="coach-name">coach-name</label>
                         </div>
                         <div className="listItem">
                             <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                            <div>
-                                <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                                <label className="club-name">club-name</label>
-                            </div>
+
                             <label className="coach-name">coach-name</label>
                         </div>
                         <div className="listItem">
                             <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                            <div>
-                                <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                                <label className="club-name">club-name</label>
-                            </div>
+
                             <label className="coach-name">coach-name</label>
                         </div>
                         <div className="listItem">
                             <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                            <div>
-                                <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                                <label className="club-name">club-name</label>
-                            </div>
+
                             <label className="coach-name">coach-name</label>
                         </div>
                         <div className="listItem">
                             <img src={avatar} className="coach-pic" alt="coach-avatar" />
-                            <div>
-                                <img src={clubLogo} className="club-logo" alt="club-logo"/>
-                                <label className="club-name">club-name</label>
-                            </div>
+
                             <label className="coach-name">coach-name</label>
                         </div>
                     </div>

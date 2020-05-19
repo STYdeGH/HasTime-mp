@@ -4,9 +4,6 @@ import CoachCheck from './CoachCheck';
 import CoachManage from './CoachManage'
 import TeachingManage from './TeachingManage'
 import CoachList from "./CoachList";
-import CoachCheckDetail from "./CoachCheckDetail";
-import CoachManageDetail from "./CoachManageDetail";
-import TeachingManageDetail from "./TeachingManageDetail";
 import CoachAssign from "./CoachAssign";
 import SignUp from "./SignUp";
 import SignIn from  './SignIn'
@@ -26,6 +23,9 @@ import MenuManage from './MenuManage';
 import MenuDetail from './MenuDetail';
 import MenuEdit from './MenuEdit';
 import MenuAdd from './MenuAdd';
+import CheckDetail from "./CheckDetail";
+import ManageDetail from "./ManageDetail";
+import UnlockDetail from "./UnlockDetail";
 
 function App() {
   return(
@@ -35,12 +35,12 @@ function App() {
             <Route path={"/SignUp"} component={SignUp} />
             <Route path="/CoachList" component={CoachList} />
             <Route path="/CoachCheck" component={CoachCheck} />
-            <Route path="/CoachCheck/detail" component={CoachCheckDetail} />
+            <Route path="/CoachCheckDetail" component={CheckDetail} />
             <Route path="/CoachManage" component={CoachManage} />
-            <Route path="/CoachManage/detail" component={CoachManageDetail} />
-            <Route path="/CoachManage/detail/assign" component={CoachAssign} />
+            <Route path="/CoachManageDetail" component={ManageDetail} />
+            <Route path="/CoachAssign" component={CoachAssign} />
             <Route path="/TeachingManage" component={TeachingManage} />
-            <Route path="/TeachingManage/detail" component={TeachingManageDetail} />
+            <Route path="/TeachingManageDetail" component={UnlockDetail} />
             <Route path="/ClubManage" component={ClubManage} />
             <Route path="/ClubDetail" component={ClubDetail} />
             <Route path="/ClubEdit" component={ClubEdit} />
