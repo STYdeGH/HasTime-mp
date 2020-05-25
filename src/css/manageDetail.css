@@ -3,16 +3,16 @@
     top : 10%;
     left: 18%;
     width: 70%;
-    height: 88%;
+    height: 90%;
     background-color: white;
 }
 
 .content-manage .manageDetails{
     position: fixed;
-    top : 10%;
+    top : 8%;
     left: 18%;
-    height: 85%;
-    width: 35%;
+    height: 88%;
+    width: 45%;
     display: flex;
     flex-direction: column;
 
@@ -23,7 +23,7 @@
     top : 5%;
     left: 5%;
     height: 35%;
-    width: 50%;
+    width: 30%;
 }
 
 .manageDetailImg .manageDetailPic{
@@ -51,7 +51,7 @@
 
 .manageDetailInfo .manageDetailItem{
     position: relative;
-    top : 0%;
+    top : 2%;
     left: 0%;
     height: 14%;
     width: 100%;
@@ -62,9 +62,21 @@
 .manageDetailItem .manageDetailItemLogo{
     position: relative;
     top : 10%;
-    left: 0%;
+    left: -3%;
     height: 60%;
     width: 8%;
+}
+
+#starLogo {
+    margin-top: 0.5%;
+}
+
+#starText {
+    font-size: 18px;
+}
+
+.b {
+    font-size: 20px;
 }
 
 .manageDetailItem .manageDetailItemInfo{
@@ -76,41 +88,271 @@
     font-size: 15px;
 }
 
-.content-manage  .manageOperation {
-    position: relative;
-    float: right;
-    margin-right: 30%;
-    margin-top: 20%;
-    width: 20%;
+.manageDetailItem button {
+    top: 30%;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
     height: 80%;
+    width: 20%;
+}
+
+.btn-star {
+    position: relative;
+    margin-left: 0%;
+    background-color: #32CD32;
+}
+
+.btn-assign {
+    position: relative;
+    margin-left: 10%;
+    background-color: #66afe9;
+}
+
+.btn-leave {
+    position: relative;
+    left: 10%;
+    background-color: goldenrod;
+}
+
+.manageDetailItem button:hover {
+    color: white;
+}
+
+.content-manage .coachList{
+    position: absolute;
+    top : 5%;
+    left: 55%;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+}
+
+.coachList .prompt{
+    position: relative;
+    top : 0%;
+    left: 2%;
+    height: 8%;
+    width: 96%;
+}
+
+.prompt .promptInfo{
+    position: relative;
+    top : 10%;
+    left: 1%;
+    font-weight: bold;
+    color: #8A8A8A;
+    font-size: 23px;
+}
+
+.coachList .splitArea{
+    position: relative;
+    top : 0%;
+    left: 0%;
+    height: 1%;
+    width: 100%;
+    background-color: #A3D0C3;
+}
+
+.coachList .comment{
+    position: relative;
+    left: 5%;
+    color: #F2C94C;
+    font-size: 16px;
+}
+
+.coachList .coaches{
+    position: absolute;
+    top : 10%;
+    left: 0%;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(auto-fill,125px);
+    grid-row-gap: 15px;
+    grid-column-gap: 5%;
+    justify-items: center;
+}
+
+.coachItem{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80%;
+    height: 125px;
+    background-color: white;
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
 }
 
-.manageOperation button {
-    margin-top: 20%;
-    width: 100px;
-    height: 36px;
+.coachItem .coachItemLogo{
+    position: relative;
+    top : 5%;
+    left: 15%;
+    height: 55%;
+    width: 70%;
+    border-radius: 50%;
+}
+
+.coachItem .coachItemName {
+    position: relative;
+    top: 15%;
+    left: 30%;
+    font-weight: normal;
+    color: #828282;
+}
+
+.custom-ui {
+    position: absolute;
+    left: 38%;
+    top: 20%;
+    width: 22%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
     border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-family: Arial,Helvetica,sans-serif;;
-    font-size: 14px;
-    color: whitesmoke;
-    font-weight: bold;
-    outline-style: none;
-
 }
 
-.btn-assign {
-    background-color: #66afe9;
-
+.custom-ui .titleDiv {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    margin-top: 0;
+    background-color: #EB5757;
+    border-radius: 5px;
 }
 
-.btn-leave {
-    background-color: goldenrod;
-}
-
-.manageOperation button:hover {
+.titleDiv .confirm-title{
+    position: relative;
+    margin-left: 38%;
     color: white;
+ }
+
+.custom-ui .contentDiv {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.contentDiv .confirm-content {
+    position: relative;
+    top: 10%;
+    left: 5%;
+}
+
+.custom-ui .btnDiv {
+    position: relative;
+    //top: 80%;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    background-color: #F8F8F8;
+}
+
+.btnDiv button {
+    width: 50%;
+    cursor: pointer;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.can {
+    color: #555;
+    background-color: #efefef;
+}
+
+.can:hover {
+    background-color: #cccccc;
+}
+
+.del {
+    background-color: #e64942;
+    color: white;
+}
+
+.cui {
+    position: absolute;
+    left: 38%;
+    top: 20%;
+    width: 22%;
+    height: 30%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    border: #A3D0C3 1px solid;
+    border-radius: 5px;
+}
+
+.cui .cDiv {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    margin-top: 0;
+    background-color: green;
+}
+
+.cui .tDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    background: #A3D0C3;
+    border-radius: 5px;
+}
+
+.tDiv input, .tDiv button {
+    background: transparent;
+}
+
+.tDiv input {
+    position: relative;
+    outline-style: none;
+    height: 86%;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+}
+
+.tDiv button {
+    position: relative;
+    float: right;
+    margin-right: 2%;
+}
+
+
+.tDiv button:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 28px;
+    color: #F9F0DA;
+}
+.cui .block {
+    height: 10%;
+}
+
+.cui .bDiv {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background-color: whitesmoke;
+}
+
+.yes {
+    position: relative;
+    float: right;
+    background-color: #32CD32;
+    width: 30%;
+    height: 90%;
+    top: 10%;
+    border-radius: 5px;
 }

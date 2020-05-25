@@ -28,12 +28,12 @@
     position: relative;
     width: 12%;
     height: 60%;
-    left: 10%;
+    left: 15%;
 }
 
 .adminName{
     position: relative;
-    left: 12%;
+    left: 22%;
     top : 6%;
     font-family: Roboto;
     color: #828282;

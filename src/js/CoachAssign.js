@@ -18,87 +18,206 @@ import '../css/coachAssign.css'
 let otherStyle = {backgroundColor:'white', fontWeight: 'normal'};
 let chosenStyle = {backgroundColor:'#F2C94C', fontWeight: 'bold'};
 
-function CoachAssign() {
+class CoachAssign extends React.Component{
+    state = {
+        coachInfo: {},
+        clubList: [],
+        club: -1,
+    };
 
-    return(
-        <div className="root">
-            <Top/>
-            <div className="HeadSide">
-                <img src={avatar} alt="admin" className="headAdmin" />
+    getQueryString = (name) => {
+        let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        let r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        }
+        return null;
+    };
 
-                <div className="adminInfo">
-                    <img src={userLogo} alt="manage" className="adminLogo" />
-                    <label className="adminName">admin-username</label>
-                </div>
+    componentWillMount() {
+        fetch('/user-server/web/getCoachInfoByID?'+
+            `userID=${this.getQueryString("coachId")}`, {
+            method: 'GET',
+            headers:new Headers({
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }),
+        }).then(res => res.json())
+            .then((data) => {
+                let info = data.data;
+                console.log('Success:', JSON.stringify(data));
+                if(info == "" || info == null){
+                    alert("该教练暂无信息");
 
-                <div className="sideItem" id="check" style={otherStyle} onClick={jumpCheck}>
-                    <img src={checkLogo} alt="check-icon" className="sidePic" />
-                    <label className="sideText">教练审核</label>
-                </div>
+                }else{
+                    this.setState({
+                        coachInfo: info,
+                    });
 
-                <div className="sideItem" id="manage" style={chosenStyle} onClick={jumpManage}>
-                    <img src={manageLogo} alt="manage-icon" className="sidePic"/>
-                    <label className="sideText">教练管理</label>
-                </div>
+                }
 
-                <div className="sideItem" id="unlock" style={otherStyle} onClick={jumpUnlock}>
-                    <img src={unlockLogo} alt="unlock-icon" className="sidePic"/>
-                    <label className="sideText" >教学管理</label>
-                </div>
+            })
+            .catch(error => console.error('Error:', error));
 
-            </div>
-            <div className="content-assign">
-                <div className = "manageDetails">
-                    <div className = "manageDetailImg">
-                        <img src={ali} alt="course" className="manageDetailPic"/>
+        fetch('/user-server/web/getOtherGyms?'+
+            `adminID=${this.getQueryString("adminId")}`, {
+            method: 'GET',
+            headers:new Headers({
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }),
+        }).then(res => res.json())
+            .then((data) => {
+                let list = data.data;
+                console.log('Success:', JSON.stringify(data));
+                if(list == "" || list == null){
+                    alert("暂无其他俱乐部");
+
+                }else{
+                    this.setState({
+                        clubList: list,
+                    });
+                }
+
+            })
+            .catch(error => console.error('Error:', error));
+
+    };
+
+    jumpCheck = ()=> {
+
+        window.location.href = "/CoachCheck?adminId="
+            + this.getQueryString("adminId");
+    };
+
+    jumpManage = () => {
+
+        window.location.href = "/CoachManage?adminId="
+            + this.getQueryString("adminId");
+    };
+
+    jumpUnlock = () => {
+
+        window.location.href = "/TeachingManage?adminId="
+            + this.getQueryString("adminId");
+    };
+
+    handleInput = (type, event) => {
+        let value = event.target.value;
+        let newState = {};
+        newState[type] = value;
+        this.setState(newState);
+    };
+
+    assign = () => {
+        console.log(this.state.club);
+        fetch('/user-server/web/coachChangeGym',{
+            method: 'POST',
+            headers:new Headers({
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }),
+            body: `coachID=${this.getQueryString("coachId")}&gymID=${this.state.club}`,
+        }).then(response => response.json())
+            .then((response) => {
+                console.log('Success:', JSON.stringify(response));
+                let msg = response.data;
+                if(msg) {
+                    alert("操作成功！");
+                    window.location.href = "/CoachManage?adminId="
+                        + this.getQueryString("adminId");
+                }
+                else{
+                    alert("操作失败，请稍后再试！")
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    };
+
+    render() {
+        return(
+            <div className="root">
+                <Top/>
+                <div className="HeadSide">
+                    <img src={avatar} alt="admin" className="headAdmin" />
+
+                    <div className="adminInfo">
+                        <img src={userLogo} alt="manage" className="adminLogo" />
+                        <label className="adminName">admin</label>
                     </div>
 
-                    <div className = "manageDetailInfo">
-                        <div className="manageDetailItem" id="manageDetailClub">
-                            <img src={clubLogo} alt="name" className="manageDetailItemLogo"/>
-                            <text className="manageDetailItemInfo">club-name</text>
+                    <div className="sideItem" id="check" style={otherStyle}
+                         onClick={this.jumpCheck.bind(this)}>
+                        <img src={checkLogo} alt="check-icon" className="sidePic" />
+                        <label className="sideText">教练审核</label>
+                    </div>
+
+                    <div className="sideItem" id="manage" style={chosenStyle}
+                         onClick={this.jumpManage.bind(this)}>
+                        <img src={manageLogo} alt="manage-icon" className="sidePic"/>
+                        <label className="sideText">教练管理</label>
+                    </div>
+
+                    <div className="sideItem" id="unlock" style={otherStyle}
+                         onClick={this.jumpUnlock.bind(this)}>
+                        <img src={unlockLogo} alt="unlock-icon" className="sidePic"/>
+                        <label className="sideText" >教学管理</label>
+                    </div>
+
+                </div>
+                <div className="content-assign">
+                    <div className = "assignDetails">
+                        <div className = "manageDetailImg">
+                            <img src={this.state.coachInfo.avatarUrl} alt="coach-avatar"
+                                 className="manageDetailPic"/>
                         </div>
 
-                        <div className="manageDetailItem" id="manageDetailName">
-                            <img src={name} alt="name" className="manageDetailItemLogo"/>
-                            <text className="manageDetailItemInfo">courseName</text>
-                        </div>
+                        <div className = "manageDetailInfo">
+                            <div className="manageDetailItem" id="manageDetailClub">
+                                <img src={clubLogo} alt="name" className="manageDetailItemLogo"/>
+                                <text className="manageDetailItemInfo">club-name</text>
+                            </div>
 
-                        <div className="manageDetailItem" id="manageDetailType">
-                            <img src={gender} alt="type" className="manageDetailItemLogo"/>
-                            <text className="manageDetailItemInfo">女</text>
-                        </div>
+                            <div className="manageDetailItem" id="manageDetailName">
+                                <img src={name} alt="name" className="manageDetailItemLogo"/>
+                                <text className="manageDetailItemInfo">{this.state.coachInfo.realName}</text>
+                            </div>
 
-                        <div className="manageDetailItem" id="manageDetailAddress">
-                            <img src={age} alt="address" className="manageDetailItemLogo"/>
-                            <text className="manageDetailItemInfo">42</text>
-                        </div>
+                            <div className="manageDetailItem" id="manageDetailType">
+                                <img src={gender} alt="type" className="manageDetailItemLogo"/>
+                                <text className="manageDetailItemInfo">{this.state.coachInfo.city}</text>
+                            </div>
+
+                            <div className="manageDetailItem" id="manageDetailAddress">
+                                <img src={age} alt="address" className="manageDetailItemLogo"/>
+                                <text className="manageDetailItemInfo">{this.state.coachInfo.level}</text>
+                            </div>
 
 
-                        <div className="manageDetailItem" id="manageDetailTime">
-                            <img src={phone} alt="time" className="manageDetailItemLogo"/>
-                            <text className="manageDetailItemInfo">47835</text>
-                        </div>
+                            <div className="manageDetailItem" id="manageDetailTime">
+                                <img src={phone} alt="time" className="manageDetailItemLogo"/>
+                                <text className="manageDetailItemInfo">{this.state.coachInfo.phone}</text>
+                            </div>
 
-                        <div className="manageDetailItem" id="manageDetailDis">
-                            <img src={comment} alt="description" className="manageDetailItemLogo"/>
-                            <text className="manageDetailItemInfo">纳粹德军拉萨好肥啊飞机克里夫heal</text>
+                            <div className="manageDetailItem" id="manageDetailDis">
+                                <img src={comment} alt="description" className="manageDetailItemLogo"/>
+                                <text className="manageDetailItemInfo">{this.state.coachInfo.description}</text>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="operation">
-                    <select>
-                        <option>请选择</option>
-                        <option>俱乐部1</option>
-                        <option>俱乐部2</option>
-                        <option>俱乐部3</option>
-                        <option>俱乐部4</option>
-                    </select>
-                    <button className="btn-yes">确定</button>
+                    <div className="operation">
+                        <select value={this.state.club} onChange={this.handleInput.bind(this, 'club')}>
+                            {
+                                this.state.clubList.map(function (club) {
+                                    return(
+                                        <option value={club.id} key={club.id}>{club.name}</option>
+                                    )
+                                })
+                            }
+                        </select>
+                        <button className="btn-yes" onClick={this.assign.bind(this)}>确定</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default CoachAssign;
