@@ -53,28 +53,6 @@
     flex-direction: row;
 }
 
-#menuDetailShiCai{
-    position: relative;
-    top : 0%;
-    left: 0%;
-    height: 60%;
-    width: 100%;
-}
-
-#menuDetailShiCai img{
-    position: relative;
-    height: 20%;
-    top: -5px;
-}
-
-#menuDetailShiCai ul{
-    position: relative;
-    top: -10px;
-    left: -8px;
-    font-weight: normal;
-    color: #828282;
-}
-
 .menuDetailItem .menuDetailButton{
     position: relative;
     top: 50%;
@@ -214,8 +192,18 @@
 
 .optItem .optItemName{
     position: relative;
-    top : 15%;
+    top : 5%;
     left: 5%;
     font-weight: normal;
     color: #828282;
+    font-size: 12px;
+}
+
+.optItem .optItemPic{
+    position: relative;
+    top : 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    font-weight: normal;
 }

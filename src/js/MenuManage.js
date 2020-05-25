@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ Component } from 'react'
 import { Link } from 'react-router-dom';
 import '../css/headSide.css'
 import '../css/nav.css'
@@ -21,148 +21,184 @@ import lightMenu from '../assets/lightMenu.png'
 
 import {white} from "color-name";
 
-function MenuManage(){
-    return(
-        <div className="root">
-            <div className="top-nav">
-                <img src={logo} className="nav-logo" alt="logo" />
-                <label className="nav-title">Has Time</label>
-                <button className="btn-exit" onClick={()=>this.props.history.push("./coach_check")}>exit</button>
-            </div>
+class MenuManage extends Component{
 
-            <div className="HeadSide">
-                <img src={headadmin} alt="admin" className="headAdmin"/>
+    constructor(props) {
+        super(props);
+        this.state = {
+            recipeList:[]
+        };
+    }
 
-                <div className="adminInfo">
-                    <img src={manage} alt="manage" className="adminLogo"/>
-                    <text className="adminName">admin-username</text>
+    //组件一开始渲染的时候获取所有的食谱信息
+    componentDidMount() {
+        fetch('/diet-service/recipe/all?page=0&pageSize=100',{
+            method: 'GET',
+            mode: "cors",
+            headers:{
+                'Content-Type': 'application/json;charset=UTF-8'
+            }
+        }).then(res => res.json())
+            .then((data) => {
+                console.log(data);
+                //检查每一个食谱
+                let rList = data.data;
+                let del = 0;
+                //alert(data.data)
+                for(let i=0;i<data.data.length;i++){
+                    let id = data.data[i].id;
+                    //alert(id);
+                    fetch('/diet-service/recipe/'+id,{
+                        method: 'GET',
+                        mode: "cors",
+                        headers:{
+                            'Content-Type': 'application/json;charset=UTF-8'
+                        }
+                    }).then(res => res.json())
+                        .then((data) => {
+                            //console.log(data);
+                            if(data.msg == "操作成功！"){
+                                rList[i] = data.data;
+                            }
+                            else{
+                                rList[i] = {};
+                            }
+
+                        })
+                        .catch((error) => {
+                            alert(error)
+                        })
+                }
+
+                this.setState({
+                    recipeList: rList,
+                });
+                console.log(this.state.recipeList);
+            })
+            .catch((error) => {
+                alert(error)
+            })
+    }
+
+    handleMenuClick = (type, event) =>{
+        if(type == "add"){
+            this.props.history.push('/MenuAdd');
+        }
+        else if(type == "search"){
+            let searchName = document.getElementById("menuSearch").value;
+            //alert(searchName);
+            fetch('/diet-service/recipe/name/'+searchName+"?page=0&pageSize=100",{
+                method:'get',
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'/* 请求内容类型 */
+                },
+            }).then((response)=>{
+                return response.json()
+            }).then((data)=>{
+                console.log(data)
+                let newMenuList = data.data;
+                let newState = {};
+                newState["recipeList"] = newMenuList
+                this.setState(newState);
+            }).catch(function(error){
+                console.log(error)
+            })
+        }
+        else{
+            let recipeId = type;
+            //alert(clubId);
+            let data = {
+                recipeId: recipeId
+            }
+            this.props.history.push({ pathname:'/MenuDetail',query:data})
+        }
+    }
+
+    jumpClub(){
+        this.props.history.push('/ClubManage');
+    }
+
+    jumpCourse(){
+        this.props.history.push('/CourseManage');
+    }
+
+    jumpAct(){
+        this.props.history.push('/ActivityManage');
+    }
+
+    jumpMenu(){
+        this.props.history.push('/MenuManage');
+    }
+
+    render(){
+        const list = this.state.recipeList;
+        return(
+            <div className="root">
+                <div className="top-nav">
+                    <img src={logo} className="nav-logo" alt="logo" />
+                    <label className="nav-title">Has Time</label>
+                    <button className="btn-exit" onClick={()=>this.props.history.push("/SignIn")}>exit</button>
                 </div>
 
-                <div className="sideItem" style={{marginTop:'5%',backgroundColor:'white'}} onClick={jumpClub}>
-                    <img src={manageClub} alt="manageClub" className="sidePic"/>
-                    <text className="sideText" style={{fontWeight: 'normal'}}>俱乐部管理</text>
-                </div>
+                <div className="HeadSide">
+                    <img src={headadmin} alt="admin" className="headAdmin"/>
 
-                <div className="sideItem" style={{backgroundColor:'white'}} onClick={jumpCourse}>
-                    <img src={manageCourse} alt="manageClub" className="sidePic"/>
-                    <text className="sideText" style={{fontWeight: 'normal'}}>课程管理</text>
-                </div>
-
-                <div className="sideItem" style={{backgroundColor:'#F2C94C'}} onClick={jumpMenu}>
-                    <img src={manageMenu} alt="manageClub" className="sidePic"/>
-                    <text className="sideText" style={{fontWeight: 'bold'}}>食谱管理</text>
-                </div>
-
-                <div className="sideItem" style={{backgroundColor:'white'}} onClick={jumpAct}>
-                    <img src={manageAct} alt="manageClub" className="sidePic"/>
-                    <text className="sideText" style={{fontWeight: 'normal'}}>活动管理</text>
-                </div>
-
-            </div>
-
-            <div className = "main-menuContent">
-                <div className="addNewMenu">
-                    <button className="addNewMenuButton">添加新的食谱</button>
-                </div>
-
-                <div className = "searchBar">
-                    <form>
-                        <input type="text" placeholder="请输入你要搜索的食谱名称..."/>
-                        <button type="submit"></button>
-                    </form>
-                </div>
-
-                <div className="menuList">
-                    <div className="menuItem">
-                        <img src={club} alt="manageMenu" className="menuPic"/>
-                        <div className="menuName">
-                            <img src={menu} alt="name" className="menuNameLogo"/>
-                            <text className="menuNameText">menuname</text>
-                        </div>
-                        <div className="menuType">
-                            <img src={menuType} alt="type" className="menuTypeLogo"/>
-                            <text className="menuTypeText">menuType</text>
-                        </div>
+                    <div className="adminInfo">
+                        <img src={manage} alt="manage" className="adminLogo"/>
+                        <text className="adminName">admin</text>
                     </div>
 
+                    <div className="sideItem" style={{marginTop:'5%',backgroundColor:'white'}} onClick={this.jumpClub.bind(this)}>
+                        <img src={manageClub} alt="manageClub" className="sidePic"/>
+                        <text className="sideText" style={{fontWeight: 'normal'}}>俱乐部管理</text>
+                    </div>
+
+                    <div className="sideItem" style={{backgroundColor:'#F2C94C'}} onClick={this.jumpMenu.bind(this)}>
+                        <img src={manageMenu} alt="manageClub" className="sidePic"/>
+                        <text className="sideText" style={{fontWeight: 'bold'}}>食谱管理</text>
+                    </div>
+
+                    <div className="sideItem" style={{backgroundColor:'white'}} onClick={this.jumpAct.bind(this)}>
+                        <img src={manageAct} alt="manageClub" className="sidePic"/>
+                        <text className="sideText" style={{fontWeight: 'normal'}}>活动管理</text>
+                    </div>
 
                 </div>
 
-            </div>
-        </div>
+                <div className = "main-menuContent">
+                    <div className="addNewMenu">
+                        <button className="addNewMenuButton" onClick={this.handleMenuClick.bind(this,"add")}>添加新的食谱</button>
+                    </div>
 
-    )
+                    <div className = "searchBarM">
+                            <input type="text" id="menuSearch" placeholder="请输入你要搜索的食谱名称..."/>
+                            <button type="submit" onClick={this.handleMenuClick.bind(this,"search")}></button>
+                    </div>
+
+                    <div className="menuList">
+                        {list.map(menuItem =>
+                            <div className="menuItem" key={menuItem.id.toString()} onClick={this.handleMenuClick.bind(this,menuItem.id.toString())}>
+                                <img src={menuItem.imgUrl} alt="manageMenu" className="menuPic"/>
+                                <div className="menuName">
+                                    <img src={menu} alt="name" className="menuNameLogo"/>
+                                    <text className="menuNameText">{menuItem.name}</text>
+                                </div>
+                                <div className="menuType">
+                                    <img src={menuType} alt="type" className="menuTypeLogo"/>
+                                    <text className="menuTypeText">{menuItem.classification}</text>
+                                </div>
+                            </div>
+                        )}
+
+                    </div>
+
+                </div>
+            </div>
+
+        )
+    }
 }
 
 export default MenuManage;
 
-function jumpClub() {
-    alert("success");
-    var side = document.getElementsByClassName("sideItem");
-    var chooseSide = side[0];
-    chooseSide.style.backgroundColor = "#F2C94C";
-    side[1].style.backgroundColor = "white";
-    side[2].style.backgroundColor = "white";
-    side[3].style.backgroundColor = "white";
 
-    var text = document.getElementsByClassName("sideText");
-    var chooseText = text[0];
-    chooseText.style.fontWeight = "bold";
-    text[1].style.fontWeight = "normal";
-    text[2].style.fontWeight = "normal";
-    text[3].style.fontWeight = "normal";
-
-}
-
-function jumpCourse() {
-    alert("success");
-    var side = document.getElementsByClassName("sideItem");
-    var chooseSide = side[1];
-    chooseSide.style.backgroundColor = "#F2C94C";
-    side[0].style.backgroundColor = "white";
-    side[2].style.backgroundColor = "white";
-    side[3].style.backgroundColor = "white";
-
-    var text = document.getElementsByClassName("sideText");
-    var chooseText = text[1];
-    chooseText.style.fontWeight = "bold";
-    text[0].style.fontWeight = "normal";
-    text[2].style.fontWeight = "normal";
-    text[3].style.fontWeight = "normal";
-
-}
-
-function jumpMenu() {
-    alert("success");
-    var side = document.getElementsByClassName("sideItem");
-    var chooseSide = side[2];
-    chooseSide.style.backgroundColor = "#F2C94C";
-    side[0].style.backgroundColor = "white";
-    side[1].style.backgroundColor = "white";
-    side[3].style.backgroundColor = "white";
-
-    var text = document.getElementsByClassName("sideText");
-    var chooseText = text[2];
-    chooseText.style.fontWeight = "bold";
-    text[0].style.fontWeight = "normal";
-    text[1].style.fontWeight = "normal";
-    text[3].style.fontWeight = "normal";
-    window.location.href = "/Top";
-}
-
-function jumpAct() {
-    alert("success");
-    var side = document.getElementsByClassName("sideItem");
-    var chooseSide = side[3];
-    chooseSide.style.backgroundColor = "#F2C94C";
-    side[0].style.backgroundColor = "white";
-    side[1].style.backgroundColor = "white";
-    side[2].style.backgroundColor = "white";
-
-    var text = document.getElementsByClassName("sideText");
-    var chooseText = text[3];
-    chooseText.style.fontWeight = "bold";
-    text[0].style.fontWeight = "normal";
-    text[1].style.fontWeight = "normal";
-    text[2].style.fontWeight = "normal";
-}
