@@ -1,27 +1,58 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React,{ Component } from 'react'
 import logo from "../assets/app-logo.png";
 import '../css/signUp.css'
 
-class SignUp extends Component {
-    static propTypes = {
-        userInfo: PropTypes.object.isRequired,
-        saveUserInfo: PropTypes.func.isRequired,
-    }
+let style = {display: "none"}
 
+class SignUp extends Component {
     state = {
         phone: '',
         password: '',
         again: '',
-        role: "0"
-    }
+        role: "0",
+        club: 0,
+        clubList: []
+    };
 
     handleInput = (type, event) => {
         let value = event.target.value
         let newState = {}
         newState[type] = value
-        this.setState(newState)
-    }
+        if(newState.role == "分部") {
+
+            fetch('/user-server/web/getNoAdminClubs',{
+                method: 'GET',
+                mode: "cors",
+                headers:{
+                    'Content-Type': 'application/json;charset=UTF-8'
+                }
+            }).then(res => res.json())
+                .then((data) => {
+                    let list = data.data;
+                    if(list == "" || list == null){
+                        alert("暂无缺乏管理员的俱乐部");
+
+                    }
+                    else{
+                        this.setState({
+                            clubList: list,
+                            club: list[0].id.toString(),
+                        });
+                        console.log(this.state.clubList);
+                        document.getElementById("clubBox").style.display = "inline";
+                    }
+
+                })
+                .catch((error) => {
+                    alert(error)
+                })
+        }
+        if(newState.role == "总部") {
+            document.getElementById("clubBox").style.display = "none";
+        }
+        this.setState(newState);
+
+    };
 
     register = async () => {
         if(this.state.password != this.state.again) {
@@ -29,18 +60,30 @@ class SignUp extends Component {
             window.location.reload()
         }
         else{
-            let data = {
-                username: this.state.phone,
-                password: this.state.password,
-                role: this.state.role
-            }
+            fetch('/user-server/web/adminRegister', {
+                method: 'POST',
+                headers:new Headers({
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }),
+                body: `phone=${this.state.phone}&password=${this.state.password}
+                &type=${this.state.role}&clubId=${this.state.club}`,
+            }).then((data) => {
+                let msg = data.data;
+                if(msg == "exist"){
+                    alert("该手机号已注册账号");
+                }
+                else if(msg == "success"){
+                    window.location.href = "/";
+                }
+                else{
+                    alert("注册失败！");
+                }
 
-            let str = this.state.phone + ',' + this.state.password + ',' + this.state.role
-            alert(str)
+            })
+                .then(response => console.log('Success:', JSON.stringify(response)))
+                .catch(error => console.error('Error:', error));
         }
-
-
-    }
+    };
 
     render() {
         return(
@@ -52,7 +95,7 @@ class SignUp extends Component {
                 <div className="login">
                     <div  className="login-nav">
                         <ul className="login-ul">
-                            <li onClick={()=>window.location.href = "/Login"} className="in">sign in</li>
+                            <li onClick={()=>window.location.href = "/"} className="in">sign in</li>
                             <li className="up">sign up</li>
                         </ul>
                     </div>
@@ -76,13 +119,26 @@ class SignUp extends Component {
                         <p>
                             <label>&nbsp;&nbsp;&nbsp;&nbsp;角 色</label>
                             <select value={this.state.role} onChange={this.handleInput.bind(this, 'role')}>
-                                <option value="0" >总管理员</option>
-                                <option value="1" >分管理员</option>
+                                <option value="总部" >总管理员</option>
+                                <option value="分部" >分管理员</option>
+                            </select>
+                        </p>
+                        <p id="clubBox" style={style} placeholder="请选择俱乐部">
+                            <label>&nbsp;俱 乐 部</label>
+                            <select value={this.state.club} onChange={this.handleInput.bind(this, 'club')}>
+                                {
+
+                                    this.state.clubList.map(function (club) {
+                                        return(
+                                            <option value={club.id} key={club.id}>{club.name}</option>
+                                        )
+                                    })
+                                }
                             </select>
                         </p>
 
                     </form>
-                    <button className="btn-reg"  onClick={this.register}>注 册</button>
+                    <button className="btn-reg"  onClick={this.register.bind(this)}>注 册</button>
                 </div>
             </div>
         )

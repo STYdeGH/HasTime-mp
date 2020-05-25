@@ -7,7 +7,7 @@ function Top() {
         <div className="top-nav">
             <img src={logo} className="nav-logo" alt="logo" />
             <label className="nav-title">Has Time</label>
-            <button className="btn-exit" onClick={()=>this.props.history.push("./coach_check")}>exit</button>
+            <button className="btn-exit" onClick={() => window.location.href = "/"}>exit</button>
         </div>
     )
 }

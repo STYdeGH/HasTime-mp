@@ -19,7 +19,7 @@ function Left(){
 
                 <div className="adminInfo">
                     <img src={userLogo} alt="manage" className="adminLogo" />
-                    <label className="adminName">admin-username</label>
+                    <label className="adminName">admin</label>
                 </div>
 
                 <div className="sideItem" id="check" style={firstStyle}
@@ -45,25 +45,25 @@ function Left(){
 
 export default Left;
 
+function getQueryString(name) {
+    let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+    let r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
+}
+
 function jumpCheck() {
-    /*document.getElementById("check").style.backgroundColor = '#F2C94C';
-    document.getElementById("manage").style.backgroundColor = 'white';
-    document.getElementById("unlock").style.backgroundColor = 'white';
-
-    let text = document.getElementsByClassName("sideText");
-    text[0].style.fontWeight = 'bold';
-    text[1].style.fontWeight = 'normal';
-    text[2].style.fontWeight = 'normal';*/
-
-    window.location.href = "/CoachCheck";
+    window.location.href = "/CoachCheck?adminId=" + getQueryString("adminId");
 }
 
 function jumpManage() {
 
-    window.location.href = "/CoachManage";
+    window.location.href = "/CoachManage?adminId=" + getQueryString("adminId");
 }
 
 function jumpUnlock() {
 
-    window.location.href = "/TeachingManage";
+    window.location.href = "/TeachingManage?adminId=" + getQueryString("adminId");
 }
