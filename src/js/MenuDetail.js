@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ Component } from 'react'
 import { Link } from 'react-router-dom';
 import '../css/headSide.css'
 import '../css/nav.css'
@@ -23,185 +23,258 @@ import cDisc from '../assets/cDisc.png'
 import lightMenu from '../assets/lightMenu.png'
 import lightMenuType from '../assets/lightMenuType.png'
 import shicai from '../assets/shicai.png'
+import qialuli from '../assets/qialuli.png'
+import fat from '../assets/fat.png'
+import danbaizhi from '../assets/danbaizhi.png'
+import tanshui from '../assets/tanshui.png'
 
 import {white} from "color-name";
+import menu from "../assets/menu.png";
+import menuType from "../assets/menuType.png";
 
-function MenuDetail(){
-    return(
-        <div className="root">
-            <div className="top-nav">
-                <img src={logo} className="nav-logo" alt="logo" />
-                <label className="nav-title">Has Time</label>
-                <button className="btn-exit" onClick={()=>this.props.history.push("./coach_check")}>exit</button>
+class MenuDetail extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            calories: 0,//卡路里
+            carbohydrate: 0,//碳水化合物
+            classification: "",//类型
+            description: "",//描述
+            fat: 0,//脂肪
+            imgUrl: "string",//图片
+            ingredients: [
+                {
+                    name: "",
+                    weight: 0
+                }
+            ],//食材
+            details:"",//总的食材信息
+            name: "",//名称
+            protein: 0,//蛋白质
+            steps: [
+                {
+                    description: "",
+                    imgUrl: "",
+                    stepNo: 0
+                }
+            ],//操作步骤
+            latestStep:"",
+            latestUrl:"",
+            latestNum:0,
+        };
+    }
+
+    //组件一开始渲染的时候获取某的食谱信息
+    componentDidMount() {
+        const dataId = this.props.location.query;
+
+        fetch('/diet-service/recipe/'+dataId.recipeId,{
+            method: 'GET',
+            mode: "cors",
+            headers:{
+                'Content-Type': 'application/json;charset=UTF-8'
+            }
+        }).then(res => res.json())
+            .then((data) => {
+                console.log(data);
+                if(data.code!= 200){
+                    alert("该食谱已删除");
+                    this.props.history.push({ pathname:'/MenuManage'})
+
+                }
+                else{
+                    //alert(JSON.stringify(data.data))
+                    let newState = data.data;
+                    let shicai = data.data.ingredients;
+                    let detail = "";
+                    for(var i=0;i<shicai.length;i++){
+                        let str = shicai[i]["name"]+":"+shicai[i]["weight"]
+                        detail = detail+str+";";
+                    }
+
+                    newState["details"] = detail.substr(0,detail.length-1);
+                    this.setState(newState);
+                }
+
+
+
+            })
+            .catch((error) => {
+                alert(error)
+            })
+    }
+
+    toEditMenu(){
+        const dataId1 = this.props.location.query;
+        let data = {
+            recipeId: dataId1.recipeId
+        }
+        this.props.history.push({ pathname:'/MenuEdit',query:data})
+    }
+
+    toDeleteMenu(){
+        const dataId = this.props.location.query;
+
+        //删除一个特定的俱乐部
+        fetch('/diet-service/recipe/'+dataId.recipeId,{
+            method:'delete',
+            headers:{
+                'Content-Type':'application/json;charset=UTF-8'/* 请求内容类型 */
+            },
+        }).then((response)=>{
+            return response.json()
+        }).then((data)=>{
+            console.log(data.data);
+            if(data.msg == "操作成功！"){
+                alert("删除成功");
+                this.props.history.push('/MenuManage');
+            }
+            else{
+                alert("删除失败");
+            }
+        }).catch(function(error){
+            console.log(error)
+        })
+
+    }
+    jumpClub(){
+        this.props.history.push('/ClubManage');
+    }
+
+    jumpCourse(){
+        this.props.history.push('/CourseManage');
+    }
+
+    jumpAct(){
+        this.props.history.push('/ActivityManage');
+    }
+
+    jumpMenu(){
+        this.props.history.push('/MenuManage');
+    }
+
+    render(){
+        const stepList = this.state.steps;
+        return(
+            <div className="root">
+                <div className="top-nav">
+                    <img src={logo} className="nav-logo" alt="logo" />
+                    <label className="nav-title">Has Time</label>
+                    <button className="btn-exit" onClick={()=>this.props.history.push("/SignIn")}>exit</button>
+                </div>
+
+                <div className="HeadSide">
+                    <img src={headadmin} alt="admin" className="headAdmin"/>
+
+                    <div className="adminInfo">
+                        <img src={manage} alt="manage" className="adminLogo"/>
+                        <text className="adminName">admin</text>
+                    </div>
+
+                    <div className="sideItem" style={{marginTop:'5%',backgroundColor:'white'}} onClick={this.jumpClub.bind(this)}>
+                        <img src={manageClub} alt="manageClub" className="sidePic"/>
+                        <text className="sideText" style={{fontWeight: 'normal'}}>俱乐部管理</text>
+                    </div>
+
+                    <div className="sideItem" style={{backgroundColor:'#F2C94C'}} onClick={this.jumpMenu.bind(this)}>
+                        <img src={manageMenu} alt="manageClub" className="sidePic"/>
+                        <text className="sideText" style={{fontWeight: 'bold'}}>食谱管理</text>
+                    </div>
+
+                    <div className="sideItem" style={{backgroundColor:'white'}} onClick={this.jumpAct.bind(this)}>
+                        <img src={manageAct} alt="manageClub" className="sidePic"/>
+                        <text className="sideText" style={{fontWeight: 'normal'}}>活动管理</text>
+                    </div>
+
+                </div>
+
+                <div className = "mainMenuContent">
+                    <div className = "menuDetails">
+                        <div className = "menuDetailImg">
+                            <img src={this.state.imgUrl} alt="club" className="menuDetailPic"/>
+                        </div>
+
+                        <div className = "menuDetailInfo">
+
+                            <div className="menuDetailItem" id="menuDetailName">
+                                <img src={lightMenu} alt="name" className="menuDetailItemLogo"/>
+                                <text className="menuDetailItemInfo">{this.state.name}</text>
+                            </div>
+
+                            <div className="menuDetailItem" id="menuDetailType">
+                                <img src={lightMenuType} alt="phone" className="menuDetailItemLogo"/>
+                                <text className="menuDetailItemInfo">{this.state.classification}</text>
+                            </div>
+
+                            <div className="menuDetailItem" id="menuDetailDis">
+                                <img src={cDisc} alt="discription" className="menuDetailItemLogo"/>
+                                <text className="menuDetailItemInfo">{this.state.description}</text>
+                            </div>
+
+                            <div className="menuDetailItem" id="menuDetailKaLuLi">
+                                <img src={qialuli} alt="discription" className="menuDetailItemLogo"/>
+                                <text className="menuDetailItemInfo">{this.state.calories}</text>
+                            </div>
+
+                            <div className="menuDetailItem" id="menuDetailTanShui">
+                                <img src={tanshui} alt="discription" className="menuDetailItemLogo"/>
+                                <text className="menuDetailItemInfo">{this.state.carbohydrate}</text>
+                            </div>
+
+                            <div className="menuDetailItem" id="menuDetailFat">
+                                <img src={fat} alt="discription" className="menuDetailItemLogo"/>
+                                <text className="menuDetailItemInfo">{this.state.fat}</text>
+                            </div>
+
+                            <div className="menuDetailItem" id="menuDetailDan">
+                                <img src={danbaizhi} alt="discription" className="menuDetailItemLogo"/>
+                                <text className="menuDetailItemInfo">{this.state.protein}</text>
+                            </div>
+
+                            <div className="menuDetailItem" id="menuDetailShiCai">
+                                <img src={shicai} alt="email" className="menuDetailItemLogo"/>
+                                <text className="menuDetailItemInfo">{this.state.details}</text>
+                            </div>
+
+
+                            <div className="menuDetailItem" id="menuDetailOpt">
+                                <button className="menuDetailButton" id="menuButtonEdit" onClick={this.toEditMenu.bind(this)}>编辑</button>
+                                <button className="menuDetailButton" id="menuButtonDelete" onClick={this.toDeleteMenu.bind(this)}>删除</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div className="optList">
+                        <div className="prompt">
+                            <text className="promptInfo">操作细节</text>
+                        </div>
+
+                        <div className="splitArea">
+                        </div>
+
+                        <div className="opts">
+
+                            {stepList.map(stepItem =>
+                                <div className="optItem">
+                                    <text className="optItemName">{stepItem.description}</text>
+                                    <img src={stepItem.imgUrl} alt="step" className="optItemPic"/>
+                                </div>
+                            )}
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
             </div>
 
-            <div className="HeadSide">
-                <img src={headadmin} alt="admin" className="headAdmin"/>
-
-                <div className="adminInfo">
-                    <img src={manage} alt="manage" className="adminLogo"/>
-                    <text className="adminName">admin-username</text>
-                </div>
-
-                <div className="sideItem" style={{marginTop:'5%',backgroundColor:'white'}} onClick={jumpClub}>
-                    <img src={manageClub} alt="manageClub" className="sidePic"/>
-                    <text className="sideText" style={{fontWeight: 'normal'}}>俱乐部管理</text>
-                </div>
-
-                <div className="sideItem" style={{backgroundColor:'white'}} onClick={jumpCourse}>
-                    <img src={manageCourse} alt="manageClub" className="sidePic"/>
-                    <text className="sideText" style={{fontWeight: 'normal'}}>课程管理</text>
-                </div>
-
-                <div className="sideItem" style={{backgroundColor:'#F2C94C'}} onClick={jumpMenu}>
-                    <img src={manageMenu} alt="manageClub" className="sidePic"/>
-                    <text className="sideText" style={{fontWeight: 'bold'}}>食谱管理</text>
-                </div>
-
-                <div className="sideItem" style={{backgroundColor:'white'}} onClick={jumpAct}>
-                    <img src={manageAct} alt="manageClub" className="sidePic"/>
-                    <text className="sideText" style={{fontWeight: 'normal'}}>活动管理</text>
-                </div>
-
-            </div>
-
-            <div className = "mainMenuContent">
-                <div className = "menuDetails">
-                    <div className = "menuDetailImg">
-                        <img src={club} alt="club" className="menuDetailPic"/>
-                    </div>
-
-                    <div className = "menuDetailInfo">
-
-                        <div className="menuDetailItem" id="menuDetailName">
-                            <img src={lightMenu} alt="name" className="menuDetailItemLogo"/>
-                            <text className="menuDetailItemInfo">clubname</text>
-                        </div>
-
-                        <div className="menuDetailItem" id="menuDetailType">
-                            <img src={lightMenuType} alt="phone" className="menuDetailItemLogo"/>
-                            <text className="menuDetailItemInfo">15851388268</text>
-                        </div>
-
-                        <div className="menuDetailItem" id="menuDetailDis">
-                            <img src={cDisc} alt="discription" className="menuDetailItemLogo"/>
-                            <text className="menuDetailItemInfo">私人健身俱乐部</text>
-                        </div>
-
-                        <div className="menuDetailItem" id="menuDetailShiCai">
-                            <img src={shicai} alt="email" className="menuDetailItemLogo"/>
-                            <ul>
-                                <li>咖啡咖啡</li>
-                                <li>茶</li>
-                                <li>牛奶</li>
-                            </ul>
-                        </div>
-
-
-
-
-                        <div className="menuDetailItem" id="menuDetailOpt">
-                            <button className="menuDetailButton" id="menuButtonEdit">编辑</button>
-                            <button className="menuDetailButton" id="menuButtonDelete">删除</button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div className="optList">
-                    <div className="prompt">
-                        <text className="promptInfo">操作细节</text>
-                    </div>
-
-                    <div className="splitArea">
-                    </div>
-
-                    <div className="opts">
-                        <div className="optItem">
-                            <text className="optItemName">操作步骤</text>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-        </div>
-
-    )
+        )
+    }
 }
 
 export default MenuDetail;
-
-function jumpClub() {
-    alert("success");
-    var side = document.getElementsByClassName("sideItem");
-    var chooseSide = side[0];
-    chooseSide.style.backgroundColor = "#F2C94C";
-    side[1].style.backgroundColor = "white";
-    side[2].style.backgroundColor = "white";
-    side[3].style.backgroundColor = "white";
-
-    var text = document.getElementsByClassName("sideText");
-    var chooseText = text[0];
-    chooseText.style.fontWeight = "bold";
-    text[1].style.fontWeight = "normal";
-    text[2].style.fontWeight = "normal";
-    text[3].style.fontWeight = "normal";
-
-}
-
-function jumpCourse() {
-    alert("success");
-    var side = document.getElementsByClassName("sideItem");
-    var chooseSide = side[1];
-    chooseSide.style.backgroundColor = "#F2C94C";
-    side[0].style.backgroundColor = "white";
-    side[2].style.backgroundColor = "white";
-    side[3].style.backgroundColor = "white";
-
-    var text = document.getElementsByClassName("sideText");
-    var chooseText = text[1];
-    chooseText.style.fontWeight = "bold";
-    text[0].style.fontWeight = "normal";
-    text[2].style.fontWeight = "normal";
-    text[3].style.fontWeight = "normal";
-
-}
-
-function jumpMenu() {
-    alert("success");
-    var side = document.getElementsByClassName("sideItem");
-    var chooseSide = side[2];
-    chooseSide.style.backgroundColor = "#F2C94C";
-    side[0].style.backgroundColor = "white";
-    side[1].style.backgroundColor = "white";
-    side[3].style.backgroundColor = "white";
-
-    var text = document.getElementsByClassName("sideText");
-    var chooseText = text[2];
-    chooseText.style.fontWeight = "bold";
-    text[0].style.fontWeight = "normal";
-    text[1].style.fontWeight = "normal";
-    text[3].style.fontWeight = "normal";
-    window.location.href = "/Top";
-}
-
-function jumpAct() {
-    alert("success");
-    var side = document.getElementsByClassName("sideItem");
-    var chooseSide = side[3];
-    chooseSide.style.backgroundColor = "#F2C94C";
-    side[0].style.backgroundColor = "white";
-    side[1].style.backgroundColor = "white";
-    side[2].style.backgroundColor = "white";
-
-    var text = document.getElementsByClassName("sideText");
-    var chooseText = text[3];
-    chooseText.style.fontWeight = "bold";
-    text[0].style.fontWeight = "normal";
-    text[1].style.fontWeight = "normal";
-    text[2].style.fontWeight = "normal";
-}
