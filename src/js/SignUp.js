@@ -55,6 +55,19 @@ class SignUp extends Component {
     };
 
     register = async () => {
+        if(this.state.phone == '') {
+            alert("请输入手机号");
+            return;
+        }
+        if(this.state.password == '') {
+            alert("请输入密码");
+            return;
+        }
+        if(this.state.again == '') {
+            alert("请确认密码");
+            return;
+        }
+
         if(this.state.password != this.state.again) {
             alert("您两次输入的密码不一致，请重新输入")
             window.location.reload()
@@ -67,7 +80,9 @@ class SignUp extends Component {
                 }),
                 body: `phone=${this.state.phone}&password=${this.state.password}
                 &type=${this.state.role}&clubId=${this.state.club}`,
-            }).then((data) => {
+            }).then(response => response.json())
+                .then((data) => {
+                    console.log('Success:', JSON.stringify(data));
                 let msg = data.data;
                 if(msg == "exist"){
                     alert("该手机号已注册账号");
@@ -80,7 +95,6 @@ class SignUp extends Component {
                 }
 
             })
-                .then(response => console.log('Success:', JSON.stringify(response)))
                 .catch(error => console.error('Error:', error));
         }
     };
