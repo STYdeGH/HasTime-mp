@@ -24,6 +24,14 @@ class SignIn extends Component {
     };
 
     login = async () => {
+        if(this.state.phone == '') {
+            alert("请输入手机号");
+            return;
+        }
+        if(this.state.password == '') {
+            alert("请输入密码");
+            return;
+        }
         fetch('/user-server/web/adminLogin',{
             method: 'POST',
             headers:new Headers({
