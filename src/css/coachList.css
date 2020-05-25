@@ -47,7 +47,7 @@
     color: #F9F0DA;
 }
 
-.content .list {
+.content .list-coaches {
     position: absolute;
     top : 8%;
     left: 5%;
@@ -59,7 +59,7 @@
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(auto-fill,300px);
     grid-row-gap: 15px;
-    grid-column-gap: 5%;
+    grid-column-gap: 3%;
     justify-items: center;
 }
 

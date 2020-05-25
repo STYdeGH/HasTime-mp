@@ -7,14 +7,11 @@ import Left from "./Left";
 
 function CoachCheck() {
     return(
-        ReactDOM.render(
-            <React.StrictMode>
+        <div className="root">
                 <Top />
                 <Left/>
                 <CoachList/>
-            </React.StrictMode>,
-            document.getElementById('root')
-        )
+        </div>
     )
 }
 

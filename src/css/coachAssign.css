@@ -7,7 +7,7 @@
     background-color: white;
 }
 
-.content-assign  .manageDetails{
+.content-assign  .assignDetails{
     position: fixed;
     top : 10%;
     left: 18%;
@@ -18,7 +18,7 @@
 
 }
 
-.manageDetails .manageDetailImg{
+.assignDetails .manageDetailImg{
     position: relative;
     top : 5%;
     left: 5%;
@@ -34,7 +34,7 @@
     border: #F9F0DA solid 2px;
 }
 
-.manageDetails .manageDetailInfo{
+.assignDetails .manageDetailInfo{
     position: relative;
     top : 5%;
     left: 8%;

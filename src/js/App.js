@@ -31,7 +31,7 @@ function App() {
   return(
       <Router>
         <div>
-            <Route path={"/Login"} component={SignIn} />
+            <Route exact path={"/"} component={SignIn} />
             <Route path={"/SignUp"} component={SignUp} />
             <Route path="/CoachList" component={CoachList} />
             <Route path="/CoachCheck" component={CoachCheck} />

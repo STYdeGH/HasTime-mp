@@ -34,10 +34,14 @@
     border: #F9F0DA solid 2px;
 }
 
+.checkDetails .block {
+    height: 5%;
+}
+
 .checkDetails .checkDetailInfo{
     position: relative;
     top : 5%;
-    left: 8%;
+    left: 10%;
     height: 58%;
     width: 70%;
     display: flex;
@@ -105,9 +109,17 @@
     background-color: #32CD32;
 }
 
+.btn-pass:hover {
+    border: #63ED6E 1px solid;
+}
+
 .btn-refuse {
-    background-color: #FF4500;
+    background-color: red;
     color: #F9F0DA;
+}
+
+.btn-refuse:hover {
+    border: silver 1px solid;
 }
 
 .checkOperation button:hover {
