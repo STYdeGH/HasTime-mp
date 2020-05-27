@@ -353,9 +353,9 @@ class MenuEdit extends Component{
                                 </div>
                             </div>
 
-                            <div className = "menuAddContent2Item" id="menuEditContent2Pic">
-                                <input type="file" id="menuAddContent2PicChoose2" onChange={this.getStepPicName.bind(this)}/>
-                                <div className="menuAddContent2Img">
+                            <div className = "menuEditContent2Item" id="menuEditContent2Pic">
+                                <input type="file" id="menuEditContent2PicChoose2" onChange={this.getStepPicName.bind(this)}/>
+                                <div className="menuEditContent2Img">
                                     <img src={this.state.latestUrl} alt="menuLogo" id="menuEditContent2Pic2"/>
                                 </div>
 

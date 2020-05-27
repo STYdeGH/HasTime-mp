@@ -191,6 +191,12 @@ textarea:focus{
     height: 100%;
 }
 
+.menuEditContent2Img #menuEditContent2Pic2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 #stepEditContentButtonCancel{
     position: relative;
     left: 90%;
