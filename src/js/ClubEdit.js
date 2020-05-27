@@ -204,7 +204,7 @@ class ClubEdit extends Component{
                 <div className="top-nav">
                     <img src={logo} className="nav-logo" alt="logo" />
                     <label className="nav-title">Has Time</label>
-                    <button className="btn-exit" onClick={()=>this.props.history.push("./coach_check")}>exit</button>
+                    <button className="btn-exit" onClick={()=>this.props.history.push("/SignIn")}>exit</button>
                 </div>
 
                 <div className="HeadSide">
@@ -233,7 +233,7 @@ class ClubEdit extends Component{
                 </div>
 
                 <div className = "clubEditContent">
-                    <form className = "clubEditInfo">
+                    <div className = "clubEditInfo">
                         <div className = "clubEditContent1">
                             <div className = "clubEditContent1Item" id="clubEditContent1Name">
                                 <img src={cName} alt="address" className="clubEditContent1ItemLogo"/>
@@ -289,7 +289,7 @@ class ClubEdit extends Component{
 
                         </div>
 
-                    </form>
+                    </div>
 
                     <div className="clubEditContentButton">
                         <button id="clubEditContentButtonCancel" onClick={this.cancelUpdate.bind(this)}>取消</button>
