@@ -7,7 +7,6 @@ import '../css/index.css'
 import '../css/manageDetail.css'
 import logo from "../assets/logo.png";
 import starLogo from '../assets/icon-star.png'
-import ali from '../assets/ali.jpg'
 import name from '../assets/icon-name.png'
 import gender from '../assets/icon-gender.png'
 import age from '../assets/icon-age.png'
@@ -18,19 +17,24 @@ import userLogo from "../assets/circle.png";
 import checkLogo from "../assets/icon-check.png";
 import manageLogo from "../assets/icon-manage.png";
 import unlockLogo from "../assets/icon-unlock.png";
-import headadmin from "../assets/32.jpg";
 import city from "../assets/address.png";
 
 let otherStyle = {backgroundColor:'white', fontWeight: 'normal'};
 let chosenStyle = {backgroundColor:'#F2C94C', fontWeight: 'bold'};
 let star;
+
+/*
+ @description: 教练管理详情组件
+ */
 class ManageDetail extends React.Component{
     state = {
         coachInfo: {},
+        studentIds: [],
         studentList: [],
         show: true,
     };
 
+    //获取url中的参数
     getQueryString = (name) => {
         let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         let r = window.location.search.substr(1).match(reg);
@@ -40,8 +44,9 @@ class ManageDetail extends React.Component{
         return null;
     };
 
+    //加载教练信息和绑定学员信息
     componentWillMount() {
-
+        //获取教练详细信息
         fetch('/user-server/web/getCoachInfoByID?'+
             `userID=${this.getQueryString("coachId")}`, {
             method: 'GET',
@@ -65,6 +70,7 @@ class ManageDetail extends React.Component{
             })
             .catch(error => console.error('Error:', error));
 
+        //获取当前教练绑定学员列表
         fetch('/course-server/hastime/course/status/binding/coach?'+
             `coachId=${this.getQueryString("coachId")}`, {
             method: 'GET',
@@ -81,10 +87,24 @@ class ManageDetail extends React.Component{
                     });
 
                 }else{
+                    console.log(info);
                     this.setState({
-                        studentList: info,
+                        studentIds: info,
                     });
-
+                    fetch('/user-server/user/getNameAndAvatar?'
+                        + `userid=${this.state.studentIds}`, {
+                        method: 'GET',
+                        headers:new Headers({
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        }),
+                    }).then(res => res.json())
+                        .then((list) => {
+                            console.log('Success:', JSON.stringify(list));
+                            this.setState({
+                                studentList: list.data,
+                            });
+                        })
+                        .catch(error => console.error('Error:', error));
                 }
 
             })
@@ -115,9 +135,9 @@ class ManageDetail extends React.Component{
         + "&coachId=" + this.state.coachInfo.id;
     };
 
+    //星级评定
     modifyStar = () => {
         star = this.input.value;
-        //alert(star);
         fetch('/user-server/user/modifyCoachStar', {
             method: 'POST',
             headers:new Headers({
@@ -136,16 +156,15 @@ class ManageDetail extends React.Component{
             });
     };
 
+    //加载星级评定弹窗
     star = () => {
         confirmAlert({
             customUI: ({ onClose }) => {
                 return (
                     <div className='cui'>
-                        {/*<div className="cdiv">
-                            <h3 className="confirm-title">确认删除</h3>
-                        </div>*/}
                         <div className="tDiv">
-                            <input id="star" required="required" type="text" placeholder=" &nbsp;&nbsp;&nbsp;&nbsp;请输入评定等级"
+                            <input id="star" required="required" type="text"
+                                   placeholder=" &nbsp;&nbsp;&nbsp;&nbsp;请输入评定等级"
                                    ref={input => this.input = input} />
                             <button type="submit" onClick={() => {
                                 this.modifyStar();
@@ -159,6 +178,7 @@ class ManageDetail extends React.Component{
         });
     };
 
+    //加载确认离职弹窗
     leave = () => {
         confirmAlert({
             customUI: ({ onClose }) => {
@@ -181,8 +201,6 @@ class ManageDetail extends React.Component{
                             >删除
                             </button>
                         </div>
-
-
                     </div>
                 );
             }
@@ -190,6 +208,7 @@ class ManageDetail extends React.Component{
 
     };
 
+    //删除教练
     handleClickDelete = ()=>{
         fetch('/user-server/web/coachLeaveGym', {
             method: 'POST',
@@ -220,7 +239,8 @@ class ManageDetail extends React.Component{
                 <div className="top-nav">
                     <img src={logo} className="nav-logo" alt="logo" />
                     <label className="nav-title">Has Time</label>
-                    <button className="btn-exit" onClick={()=> window.location.href = "/"}>exit</button>
+                    <button className="btn-exit" onClick={()=>
+                        window.location.href = "/"}>exit</button>
                 </div>
 
                 <div className="HeadSide">
@@ -243,7 +263,8 @@ class ManageDetail extends React.Component{
                         <label className="sideText">教练管理</label>
                     </div>
 
-                    <div className="sideItem" id="unlock" style={otherStyle} onClick={this.jumpUnlock.bind(this)}>
+                    <div className="sideItem" id="unlock" style={otherStyle}
+                         onClick={this.jumpUnlock.bind(this)}>
                         <img src={unlockLogo} alt="unlock-icon" className="sidePic"/>
                         <label className="sideText" >教学管理</label>
                     </div>
@@ -253,50 +274,70 @@ class ManageDetail extends React.Component{
                 <div className = "content-manage">
                     <div className = "manageDetails">
                         <div className = "manageDetailImg">
-                            <img src={this.state.coachInfo.avatarUrl} alt="coach-avatar" className="manageDetailPic"/>
+                            <img src={this.state.coachInfo.avatarUrl}
+                                 alt="coach-avatar" className="manageDetailPic"/>
                         </div>
 
                         <div className = "manageDetailInfo">
                             <div className="manageDetailItem" id="manageDetailClub">
-                                <img src={starLogo} id="starLogo" alt="name" className="manageDetailItemLogo"/>
+                                <img src={starLogo} id="starLogo"
+                                     alt="name" className="manageDetailItemLogo"/>
                                 <text id="starText" className="manageDetailItemInfo">
                                     <i className="b">{this.state.coachInfo.star}</i> 级</text>
                             </div>
 
                             <div className="manageDetailItem" id="manageDetailName">
                                 <img src={name} alt="name" className="manageDetailItemLogo"/>
-                                <label className="manageDetailItemInfo">{this.state.coachInfo.realName}</label>
+                                <label className="manageDetailItemInfo">
+                                    {this.state.coachInfo.realName}
+                                </label>
                             </div>
 
                             <div className="manageDetailItem" id="manageDetailTime">
                                 <img src={phone} alt="time" className="manageDetailItemLogo"/>
-                                <text className="manageDetailItemInfo">{this.state.coachInfo.phone}</text>
+                                <text className="manageDetailItemInfo">
+                                    {this.state.coachInfo.phone}
+                                </text>
                             </div>
 
                             <div className="manageDetailItem" id="manageDetailType">
                                 <img src={gender} alt="type" className="manageDetailItemLogo"/>
-                                <text className="manageDetailItemInfo">{this.state.coachInfo.sex}</text>
+                                <text className="manageDetailItemInfo">
+                                    {this.state.coachInfo.sex}
+                                </text>
                             </div>
 
                             <div className="manageDetailItem" id="manageDetailAddress">
                                 <img src={age} alt="address" className="manageDetailItemLogo"/>
-                                <text className="manageDetailItemInfo">{this.state.coachInfo.age}岁</text>
+                                <text className="manageDetailItemInfo">
+                                    {this.state.coachInfo.age}岁
+                                </text>
                             </div>
 
                             <div className="manageDetailItem" id="manageDetailType">
                                 <img src={city} alt="type" className="manageDetailItemLogo"/>
-                                <text className="manageDetailItemInfo">{this.state.coachInfo.city}</text>
+                                <text className="manageDetailItemInfo">
+                                    {this.state.coachInfo.city}
+                                </text>
                             </div>
 
                             <div className="manageDetailItem" id="manageDetailDis">
                                 <img src={comment} alt="description" className="manageDetailItemLogo"/>
-                                <text className="manageDetailItemInfo">{this.state.coachInfo.description}</text>
+                                <text className="manageDetailItemInfo">
+                                    {this.state.coachInfo.description}
+                                </text>
                             </div>
 
                             <div className="manageDetailItem" id="manageDetailOpt">
-                                <button className="btn-star" onClick={this.star.bind(this)}>星级评定</button>
-                                <button className="btn-assign" onClick={this.jumpAssign.bind(this)}>调 遣</button>
-                                <button className="btn-leave" onClick={this.leave.bind(this)}>离 职</button>
+                                <button className="btn-star" onClick={this.star.bind(this)}>
+                                    星级评定
+                                </button>
+                                <button className="btn-assign"
+                                        onClick={this.jumpAssign.bind(this)}>调 遣
+                                </button>
+                                <button className="btn-leave"
+                                        onClick={this.leave.bind(this)}>离 职
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -315,17 +356,15 @@ class ManageDetail extends React.Component{
                         <div className="coaches">
                             {this.state.studentList.map(function(student) {
                                 return(
-                                    <div className="coachItem" key={student}>
-                                        <img src={ali} alt="logo" className="coachItemLogo"/>
-                                        <text className="coachItemName">{student}七七</text>
+                                    <div className="coachItem" key={student.userid}>
+                                        <img src={student.avatarUrl} alt="student-avatar"
+                                             className="coachItemLogo"/>
+                                        <text className="coachItemName">{student.name}</text>
                                     </div>
                                     )
                             })}
                         </div>
-
-
                     </div>
-
                 </div>
             </div>
 

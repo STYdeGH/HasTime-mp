@@ -2,6 +2,9 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import '../css/nav.css'
 
+/*
+ @description: 顶部导航栏组件
+ */
 function Top() {
     return (
         <div className="top-nav">
@@ -14,13 +17,4 @@ function Top() {
 
 export default Top;
 
-
-
-/*
-function Left() {
-
-}
-
-export default Left;
-*/
 
