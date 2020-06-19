@@ -1,17 +1,24 @@
 import React from 'react'
-import avatar from '../assets/coach.png'
 import '../css/coachList.css'
 
 let adminId;
-class CoachList extends React.Component{
 
-    state = {
-        coachList: [],
-        name: '',
+/*
+ @description: 教练列表（待审核）组件
+ */
+class CoachList extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            coachList: [],
+            name: '',
+        };
     };
 
+    //加载待审核教练列表
     componentDidMount() {
         adminId = this.getQueryString("adminId");
+        //获取待审核教练列表
         fetch('/user-server/web/getCoachsByAdminIdAndState?'+
             `adminId=${this.getQueryString("adminId")}&state=1`, {
             method: 'GET',
@@ -29,14 +36,13 @@ class CoachList extends React.Component{
                     this.setState({
                         coachList: list,
                     });
-
                 }
-
             })
             .catch(error => console.error('Error:', error));
 
     };
 
+    //获取url中的参数
      getQueryString = (name) => {
         let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         let r = window.location.search.substr(1).match(reg);
@@ -46,6 +52,7 @@ class CoachList extends React.Component{
         return null;
     };
 
+    //处理输入（输入绑定方法）
     handleInput = (type, event) => {
         let value = event.target.value;
         let newState = {};
@@ -54,8 +61,8 @@ class CoachList extends React.Component{
 
     };
 
+    //根据教练姓名搜索
     search = () => {
-
         if(this.state.name == ''){
             alert("请输入教练姓名");
         }
@@ -77,9 +84,7 @@ class CoachList extends React.Component{
                         this.setState({
                             coachList: list,
                         });
-
                     }
-
                 })
                 .catch(error => console.error('Error:', error));
         }

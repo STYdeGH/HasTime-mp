@@ -4,6 +4,9 @@ import '../css/signUp.css'
 
 let style = {display: "none"}
 
+/*
+ @description: 注册组件
+ */
 class SignUp extends Component {
     state = {
         phone: '',
@@ -14,12 +17,13 @@ class SignUp extends Component {
         clubList: []
     };
 
+    //处理输入
     handleInput = (type, event) => {
         let value = event.target.value
         let newState = {}
         newState[type] = value
+        //若是分部管理员，需要加载俱乐部列表
         if(newState.role == "分部") {
-
             fetch('/user-server/web/getNoAdminClubs',{
                 method: 'GET',
                 mode: "cors",
@@ -54,6 +58,7 @@ class SignUp extends Component {
 
     };
 
+    //注册
     register = async () => {
         if(this.state.phone == '') {
             alert("请输入手机号");
@@ -117,18 +122,21 @@ class SignUp extends Component {
                         <p>
                             <label>&nbsp;手 机 号</label>
                             <input type="text" required="required" placeholder=" 请输入手机号..."
-                                   value={this.state.phone} onChange={this.handleInput.bind(this, 'phone')} />
+                                   value={this.state.phone}
+                                   onChange={this.handleInput.bind(this, 'phone')} />
                         </p>
                         <p>
                             <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密 码</label>
-                            <input type="password" required="required" placeholder=" 请输入密码..." id="pwd"
-                                   value={this.state.password} onChange={this.handleInput.bind(this, 'password')}/>
+                            <input type="password" required="required" placeholder=" 请输入密码..."
+                                   id="pwd" value={this.state.password}
+                                   onChange={this.handleInput.bind(this, 'password')}/>
                         </p>
 
                         <p>
                             <label>确认密码</label>
-                            <input type="password" required="required" placeholder=" 请再次输入密码..." id="again"
-                                   value={this.state.again} onChange={this.handleInput.bind(this, 'again')}/>
+                            <input type="password" required="required" placeholder=" 请再次输入密码..."
+                                   id="again" value={this.state.again}
+                                   onChange={this.handleInput.bind(this, 'again')}/>
                         </p>
                         <p>
                             <label>&nbsp;&nbsp;&nbsp;&nbsp;角 色</label>

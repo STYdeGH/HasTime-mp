@@ -4,8 +4,7 @@ import '../css/headSide.css'
 import '../css/nav.css'
 import '../css/index.css'
 import '../css/unlockDetail.css'
-import logo from "../assets/logo.png";
-import ali from '../assets/ali.jpg'
+import logo from "../assets/logo.png"
 import lockLogo from '../assets/icon-lock.png'
 import name from '../assets/icon-name.png'
 import gender from '../assets/icon-gender.png'
@@ -17,11 +16,13 @@ import checkLogo from "../assets/icon-check.png";
 import manageLogo from "../assets/icon-manage.png";
 import unlockLogo from "../assets/icon-unlock.png";
 import city from "../assets/address.png";
-import comment from "../assets/icon-comment.png";
 
 let otherStyle = {backgroundColor:'white', fontWeight: 'normal'};
 let chosenStyle = {backgroundColor:'#F2C94C', fontWeight: 'bold'};
 
+/*
+ @description: 学员管理详情组件
+ */
 class UnlockDetail extends React.Component{
     state = {
         studentInfo: {},
@@ -29,6 +30,7 @@ class UnlockDetail extends React.Component{
         showBtn: true,
     };
 
+    //获取url中的参数
     getQueryString = (name) => {
         let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         let r = window.location.search.substr(1).match(reg);
@@ -38,7 +40,9 @@ class UnlockDetail extends React.Component{
         return null;
     };
 
+    //加载学员信息
     componentWillMount() {
+        //获取学员绑定的教练信息
         fetch('/course-server/hastime/course/status/binding?'
             + `userIds=${this.getQueryString("studentId")}`,{
             method: 'GET',
@@ -80,10 +84,10 @@ class UnlockDetail extends React.Component{
                         })
                         .catch(error => console.error('Error:', error));
                 }
-
             })
             .catch(error => console.error('Error:', error));
 
+        //获取学员具体信息
         fetch('/user-server/web/getCoachInfoByID?'+
             `userID=${this.getQueryString("studentId")}`, {
             method: 'GET',
@@ -95,7 +99,7 @@ class UnlockDetail extends React.Component{
                 let info = data.data;
                 console.log('Success:', JSON.stringify(data));
                 if(info == "" || info == null){
-                    alert("该教练暂无信息");
+                    alert("该学员暂无信息");
 
                 }else{
                     this.setState({
@@ -124,6 +128,7 @@ class UnlockDetail extends React.Component{
             + this.getQueryString("adminId");
     };
 
+    //解绑
     unlock = () => {
         fetch('/course-server/hastime/course/status/binding?'
             + `studentId=${this.getQueryString("studentId")}`,{
@@ -139,7 +144,6 @@ class UnlockDetail extends React.Component{
                 if(msg) {
                     alert("操作成功！");
                     window.location.reload();
-                    //window.location.href = "/CoachCheck?adminId=" + this.getQueryString("adminId");
                 }
             })
             .catch(error => console.error('Error:', error));
@@ -153,7 +157,8 @@ class UnlockDetail extends React.Component{
                 <div className="top-nav">
                     <img src={logo} className="nav-logo" alt="logo" />
                     <label className="nav-title">Has Time</label>
-                    <button className="btn-exit" onClick={() => window.location.href = "/"}>exit</button>
+                    <button className="btn-exit" onClick={() =>
+                        window.location.href = "/"}>exit</button>
                 </div>
 
                 <div className="HeadSide">
@@ -164,17 +169,20 @@ class UnlockDetail extends React.Component{
                         <label className="adminName">admin</label>
                     </div>
 
-                    <div className="sideItem" id="check" style={otherStyle} onClick={this.jumpCheck}>
+                    <div className="sideItem" id="check" style={otherStyle}
+                         onClick={this.jumpCheck}>
                         <img src={checkLogo} alt="check-icon" className="sidePic" />
                         <label className="sideText">教练审核</label>
                     </div>
 
-                    <div className="sideItem" id="manage" style={otherStyle} onClick={this.jumpManage}>
+                    <div className="sideItem" id="manage" style={otherStyle}
+                         onClick={this.jumpManage}>
                         <img src={manageLogo} alt="manage-icon" className="sidePic"/>
                         <label className="sideText">教练管理</label>
                     </div>
 
-                    <div className="sideItem" id="unlock" style={chosenStyle} onClick={this.jumpUnlock}>
+                    <div className="sideItem" id="unlock" style={chosenStyle}
+                         onClick={this.jumpUnlock}>
                         <img src={unlockLogo} alt="unlock-icon" className="sidePic"/>
                         <label className="sideText" >教学管理</label>
                     </div>
@@ -191,32 +199,44 @@ class UnlockDetail extends React.Component{
                         <div className = "unlockDetailInfo">
                             <div className="unlockDetailItem" id="unlockDetailClub">
                                 <img src={lockLogo} alt="name" className="unlockDetailItemLogo"/>
-                                <text className="unlockDetailItemInfo">{this.state.coachName}</text>
+                                <text className="unlockDetailItemInfo">
+                                    {this.state.coachName}
+                                </text>
                             </div>
 
                             <div className="unlockDetailItem" id="unlockDetailName">
                                 <img src={name} alt="name" className="unlockDetailItemLogo"/>
-                                <text className="unlockDetailItemInfo">{this.state.studentInfo.nickname}</text>
+                                <text className="unlockDetailItemInfo">
+                                    {this.state.studentInfo.nickname}
+                                </text>
                             </div>
 
                             <div className="unlockDetailItem" id="unlockDetailTime">
                                 <img src={phone} alt="time" className="unlockDetailItemLogo"/>
-                                <text className="unlockDetailItemInfo">{this.state.studentInfo.phone}</text>
+                                <text className="unlockDetailItemInfo">
+                                    {this.state.studentInfo.phone}
+                                </text>
                             </div>
 
                             <div className="unlockDetailItem" id="unlockDetailType">
                                 <img src={gender} alt="type" className="unlockDetailItemLogo"/>
-                                <text className="unlockDetailItemInfo">{this.state.studentInfo.sex}</text>
+                                <text className="unlockDetailItemInfo">
+                                    {this.state.studentInfo.sex}
+                                </text>
                             </div>
 
                             <div className="unlockDetailItem" id="unlockDetailAddress">
                                 <img src={age} alt="address" className="unlockDetailItemLogo"/>
-                                <text className="unlockDetailItemInfo">{this.state.studentInfo.age}</text>
+                                <text className="unlockDetailItemInfo">
+                                    {this.state.studentInfo.age}
+                                </text>
                             </div>
 
                             <div className="unlockDetailItem" id="unlockDetailCity">
                                 <img src={city} alt="city" className="unlockDetailItemLogo"/>
-                                <text className="unlockDetailItemInfo">{this.state.studentInfo.city}</text>
+                                <text className="unlockDetailItemInfo">
+                                    {this.state.studentInfo.city}
+                                </text>
                             </div>
 
 
