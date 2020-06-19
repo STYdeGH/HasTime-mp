@@ -1,6 +1,4 @@
 import React from 'react';
-
-import ali from '../assets/coach.png'
 import clubLogo from '../assets/icon-club.png'
 import avatar from "../assets/admin-avatar.png";
 import userLogo from "../assets/circle.png";
@@ -18,6 +16,9 @@ import '../css/coachAssign.css'
 let otherStyle = {backgroundColor:'white', fontWeight: 'normal'};
 let chosenStyle = {backgroundColor:'#F2C94C', fontWeight: 'bold'};
 
+/*
+ @description: 教练调遣组件
+ */
 class CoachAssign extends React.Component{
     state = {
         coachInfo: {},
@@ -25,6 +26,7 @@ class CoachAssign extends React.Component{
         club: -1,
     };
 
+    //获取url中的参数
     getQueryString = (name) => {
         let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         let r = window.location.search.substr(1).match(reg);
@@ -34,7 +36,9 @@ class CoachAssign extends React.Component{
         return null;
     };
 
+    //加载教练信息和俱乐部信息
     componentWillMount() {
+        //获取教练详细信息
         fetch('/user-server/web/getCoachInfoByID?'+
             `userID=${this.getQueryString("coachId")}`, {
             method: 'GET',
@@ -58,6 +62,7 @@ class CoachAssign extends React.Component{
             })
             .catch(error => console.error('Error:', error));
 
+        //获取教练可被调遣的其他俱乐部列表
         fetch('/user-server/web/getOtherGyms?'+
             `adminID=${this.getQueryString("adminId")}`, {
             method: 'GET',
@@ -107,6 +112,7 @@ class CoachAssign extends React.Component{
         this.setState(newState);
     };
 
+    //调遣教练到其他俱乐部
     assign = () => {
         console.log(this.state.club);
         fetch('/user-server/web/coachChangeGym',{

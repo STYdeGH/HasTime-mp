@@ -1,6 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
-import {Redirect} from 'react-router-dom'
 import  userLogo from '../assets/circle.png'
 import checkLogo from '../assets/icon-check.png'
 import manageLogo from '../assets/icon-manage.png'
@@ -12,6 +10,9 @@ let firstStyle = {marginTop:'5%',backgroundColor: '#F2C94C'};
 let otherStyle = {backgroundColor:'white'};
 let otherTextStyle = {fontWeight: 'normal'};
 
+/*
+ @description: 分部管理员侧边栏组件
+ */
 function Left(){
         return (
             <div className="HeadSide">
@@ -59,11 +60,9 @@ function jumpCheck() {
 }
 
 function jumpManage() {
-
     window.location.href = "/CoachManage?adminId=" + getQueryString("adminId");
 }
 
 function jumpUnlock() {
-
     window.location.href = "/TeachingManage?adminId=" + getQueryString("adminId");
 }

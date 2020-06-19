@@ -1,6 +1,4 @@
 import React from 'react';
-import ali from '../assets/coach.png'
-import clubLogo from '../assets/icon-club.png'
 import name from '../assets/icon-name.png'
 import city from '../assets/address.png'
 import age from '../assets/icon-age.png'
@@ -20,11 +18,15 @@ let firstStyle = {marginTop:'5%',backgroundColor: '#F2C94C'};
 let otherStyle = {backgroundColor:'white'};
 let otherTextStyle = {fontWeight: 'normal'};
 
+/*
+ @description: 教练审核详情组件
+ */
 class CheckDetail extends React.Component{
     state = {
         coachInfo: {},
     };
 
+    //获取url中的参数
     getQueryString = (name) => {
         let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         let r = window.location.search.substr(1).match(reg);
@@ -34,6 +36,7 @@ class CheckDetail extends React.Component{
         return null;
     };
 
+    //加载教练信息
     componentWillMount() {
         fetch('/user-server/web/getCoachInfoByID?'+
             `userID=${this.getQueryString("coachId")}`, {
@@ -52,9 +55,7 @@ class CheckDetail extends React.Component{
                     this.setState({
                         coachInfo: info,
                     });
-
                 }
-
             })
             .catch(error => console.error('Error:', error));
 
@@ -75,6 +76,7 @@ class CheckDetail extends React.Component{
         window.location.href = "/TeachingManage?adminId=" + this.getQueryString("adminId");
     };
 
+    //通过教练审核申请
     pass = () => {
         fetch('/user-server/web/passCoach',{
             method: 'POST',
@@ -94,6 +96,7 @@ class CheckDetail extends React.Component{
             .catch(error => console.error('Error:', error));
     };
 
+    //拒绝教练审核申请
     refuse = () => {
         fetch('/user-server/web/rejectCoach',{
             method: 'POST',
@@ -147,7 +150,8 @@ class CheckDetail extends React.Component{
                 <div className="content-check">
                     <div className = "checkDetails">
                         <div className = "checkDetailImg">
-                            <img src={this.state.coachInfo.avatarUrl} alt="coach-avatar" className="checkDetailPic"/>
+                            <img src={this.state.coachInfo.avatarUrl} alt="coach-avatar"
+                                 className="checkDetailPic"/>
                         </div>
 
                         <div className="block"></div>
@@ -157,32 +161,44 @@ class CheckDetail extends React.Component{
 
                             <div className="checkDetailItem" id="checkDetailName">
                                 <img src={name} alt="name" className="checkDetailItemLogo"/>
-                                <text className="checkDetailItemInfo">{this.state.coachInfo.nickname}</text>
+                                <text className="checkDetailItemInfo">
+                                    {this.state.coachInfo.nickname}
+                                </text>
                             </div>
 
                             <div className="checkDetailItem" id="checkDetailTime">
                                 <img src={phone} alt="time" className="checkDetailItemLogo"/>
-                                <text className="checkDetailItemInfo">{this.state.coachInfo.phone}</text>
+                                <text className="checkDetailItemInfo">
+                                    {this.state.coachInfo.phone}
+                                </text>
                             </div>
 
                             <div className="checkDetailItem" id="checkDetailGender">
                                 <img src={gender} alt="type" className="checkDetailItemLogo"/>
-                                <text className="checkDetailItemInfo">{this.state.coachInfo.sex}</text>
+                                <text className="checkDetailItemInfo">
+                                    {this.state.coachInfo.sex}
+                                </text>
                             </div>
 
                             <div className="checkDetailItem" id="checkDetailAddress">
                                 <img src={age} alt="address" className="checkDetailItemLogo"/>
-                                <text className="checkDetailItemInfo">{this.state.coachInfo.age} 岁</text>
+                                <text className="checkDetailItemInfo">
+                                    {this.state.coachInfo.age} 岁
+                                </text>
                             </div>
 
                             <div className="checkDetailItem" id="checkDetailType">
                                 <img src={city} alt="type" className="checkDetailItemLogo"/>
-                                <text className="checkDetailItemInfo">{this.state.coachInfo.city}</text>
+                                <text className="checkDetailItemInfo">
+                                    {this.state.coachInfo.city}
+                                </text>
                             </div>
 
                             <div className="checkDetailItem" id="checkDetailDis">
                                 <img src={comment} alt="discription" className="checkDetailItemLogo"/>
-                                <text className="checkDetailItemInfo">{this.state.coachInfo.description}</text>
+                                <text className="checkDetailItemInfo">
+                                    {this.state.coachInfo.description}
+                                </text>
                             </div>
                         </div>
                     </div>

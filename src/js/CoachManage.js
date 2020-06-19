@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import Top from './Top';
 import adminAvatar from "../assets/admin-avatar.png";
 import userLogo from "../assets/circle.png";
@@ -14,6 +12,9 @@ let otherStyle = {backgroundColor:'white', fontWeight: 'normal'};
 let chosenStyle = {backgroundColor:'#F2C94C', fontWeight: 'bold'};
 let adminId;
 
+/*
+ @description: 教练管理列表组件
+ */
 class CoachManage extends React.Component{
     constructor(props) {
         super(props);
@@ -23,9 +24,10 @@ class CoachManage extends React.Component{
         };
     }
 
-
+    //加载待管理教练列表
     componentDidMount() {
         adminId = this.getQueryString("adminId");
+        //获取待管理教练列表
         fetch('/user-server/web/getCoachsByAdminIdAndState?'+
             `adminId=${this.getQueryString("adminId")}&state=2`, {
             method: 'GET',
@@ -43,21 +45,12 @@ class CoachManage extends React.Component{
                     this.setState({
                         coachList: list,
                     });
-
                 }
-
             })
             .catch(error => console.error('Error:', error));
-
-
     };
 
-    componentWillUnmount = () => {
-        this.setState = (state, callback)=>{
-            return;
-        };
-    };
-
+    //获取url中的参数
     getQueryString = (name) => {
         let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         let r = window.location.search.substr(1).match(reg);
@@ -83,6 +76,7 @@ class CoachManage extends React.Component{
 
     };
 
+    //根据教练姓名搜索
     search = () => {
         if(this.state.name == ''){
             alert("请输入教练姓名");
@@ -125,7 +119,8 @@ class CoachManage extends React.Component{
                         <label className="adminName">admin</label>
                     </div>
 
-                    <div className="sideItem" id="check" onClick={this.jumpCheck.bind(this)} style={otherStyle}>
+                    <div className="sideItem" id="check" onClick={this.jumpCheck.bind(this)}
+                         style={otherStyle}>
                         <img src={checkLogo} alt="check-icon" className="sidePic" />
                         <label className="sideText">教练审核</label>
                     </div>
@@ -145,16 +140,19 @@ class CoachManage extends React.Component{
                 <div className="content" id="content">
                     <div className="search-bar">
                         <input type="text" placeholder="请输入您要搜索的教练姓名..."
-                               value={this.state.name} onChange={this.handleInput.bind(this, 'name')}/>
+                               value={this.state.name}
+                               onChange={this.handleInput.bind(this, 'name')}/>
                         <button type="submit" onClick={this.search.bind(this)}></button>
                     </div>
 
                     <div className="list-coaches">
                         {this.state.coachList.map((coach) => (
                             <div className="listItem"  key={coach.id}
-                                 onClick={()=>window.location.href = "/CoachManageDetail?adminId="
+                                 onClick={()=>window.location.href =
+                                     "/CoachManageDetail?adminId="
                                      + adminId + "&coachId=" + coach.id}>
-                                <img src={coach.avatarUrl}  className="coach-pic" alt="coach-avatar" />
+                                <img src={coach.avatarUrl}
+                                     className="coach-pic" alt="coach-avatar" />
                                 <label className="coach-name">{coach.realName}</label>
                             </div>
                         ))}

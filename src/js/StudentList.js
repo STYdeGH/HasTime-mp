@@ -1,9 +1,10 @@
 import React from 'react'
-import  lockLogo from '../assets/icon-lock.png'
-import ali from '../assets/ali.jpg'
 import '../css/studentList.css'
 
 let adminId;
+/*
+ @description: 学员列表组件
+ */
 class StudentList extends React.Component{
     constructor(props) {
         super(props);
@@ -13,6 +14,7 @@ class StudentList extends React.Component{
         };
     }
 
+    //加载学员列表
     componentWillMount() {
         adminId = this.getQueryString("adminId");
         fetch('/user-server/web/getGymStudents?'+
@@ -32,14 +34,13 @@ class StudentList extends React.Component{
                     this.setState({
                         studentList: list,
                     });
-
                 }
-
             })
             .catch(error => console.error('Error:', error));
 
     };
 
+    //获取url中的参数
     getQueryString = (name) => {
         let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         let r = window.location.search.substr(1).match(reg);
@@ -49,6 +50,7 @@ class StudentList extends React.Component{
         return null;
     };
 
+    //处理输入
     handleInput = (type, event) => {
         let value = event.target.value;
         let newState = {};
@@ -57,6 +59,7 @@ class StudentList extends React.Component{
 
     };
 
+    //根据学员姓名搜索
     search = () => {
         console.log(this.state.name);
         fetch('/user-server/web/getCoachsByAdminIdAndStateAndName?'+
@@ -91,10 +94,6 @@ class StudentList extends React.Component{
                      onClick={()=>window.location.href = "/TeachingManageDetail?adminId="
                          + adminId + "&studentId="+ student.id}>
                     <img src={student.avatarUrl}  className="student-pic" alt="student-avatar" />
-                    {/*<div className="lock-info">
-                        <img src={lockLogo} className="lock-logo" alt="lock-logo"/>
-                        <label className="coach-name">coach-name</label>
-                    </div>*/}
                     <label className="student-name">{student.nickname}</label>
                 </div>
             )

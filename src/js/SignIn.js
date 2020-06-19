@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import logo from "../assets/app-logo.png";
 import '../css/login.css';
 
+/*
+ @description: 登录组件
+ */
 class SignIn extends Component {
-    /*static propTypes = {
-        userInfo: PropTypes.object.isRequired,
-        saveUserInfo: PropTypes.func.isRequired,
-    };*/
-
     state = {
         phone: '',
         password: '',
@@ -16,6 +13,7 @@ class SignIn extends Component {
         club: 0,
     };
 
+    //处理输入
     handleInput = (type, event) => {
         let value = event.target.value;
         let newState = {};
@@ -23,7 +21,9 @@ class SignIn extends Component {
         this.setState(newState);
     };
 
+    //登录
     login = async () => {
+        //检查是否有空输入
         if(this.state.phone == '') {
             alert("请输入手机号");
             return;
@@ -32,6 +32,7 @@ class SignIn extends Component {
             alert("请输入密码");
             return;
         }
+        //提交数据
         fetch('/user-server/web/adminLogin',{
             method: 'POST',
             headers:new Headers({
@@ -104,4 +105,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn
+export default SignIn;
